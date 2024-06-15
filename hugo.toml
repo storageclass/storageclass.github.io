@@ -2,3 +2,7 @@ baseURL = 'https://storageclass.io/'
 languageCode = 'en-us'
 title = 'StorageClass.io - Your Information Site for Kubernetes StorageClasses'
 theme = "nightfall"
+
+[module]
+[[module.imports]]
+  path = 'github.com/LordMathis/hugo-theme-nightfall'
