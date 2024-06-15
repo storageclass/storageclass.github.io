@@ -1,0 +1,33 @@
+.alternating {
+    border-style: solid;
+    border-color: rgba($color: #000000, $alpha: 0.2);
+    border-width: 2px;
+
+    thead {
+        tr {
+            background-color: rgba($color: #000000, $alpha: 0.2);
+
+            td {
+                padding-top: 20px;
+                padding-bottom: 20px;
+                padding-left: 10px;
+                padding-right: 10px;
+                font-size: large;
+                font-weight: 400;
+            }
+        }
+    }
+ 
+    tbody {
+        tr:nth-of-type(odd) {
+            background-color: rgba($color: #ffffff, $alpha: 0.1);
+        }
+
+        tr {
+            td {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+        }
+    }
+}

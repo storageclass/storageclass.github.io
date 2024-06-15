@@ -1,0 +1,48 @@
+<table class="alternating">
+<thead>
+    <tr>
+        <td>Name</td>
+        <td>Driver Name</td>
+        <td>Description</td>
+        <td>Disk Type</td>
+        <td>Supported Features</td>
+        <td>Access Modes</td>
+    </tr>
+</thead>
+<tbody>
+{{ range .Site.Data.storageclasses.storageClasses }}
+<tr>
+    <td><a href="{{- .link -}}" rel="nofollow noopener" target="_blank">{{- .name -}}</a></td>
+    <td>{{- .driverName -}} </td>
+    <td>{{ .description | $.Page.RenderString }}</td>
+    <td width="150">
+        <ul>
+            <li>Persistent: {{ if and (.diskType) (.diskType.persistent) }}<span style="color: green">✓</span>{{ else }}<span style="color: red">𝘟</span>{{ end }}</li>
+            <li>Ephemeral: {{ if and (.diskType) (.diskType.ephemeral) }}<span style="color: green">✓</span>{{ else }}<span style="color: red">𝘟</span>{{ end }}</li>
+        </ul>
+    </td>
+    <td width="180">
+        <ul>
+            <li>Block Storage: {{ if and (.features) (.features.raw) }}<span style="color: green">✓</span>{{ else }}<span style="color: red">𝘟</span>{{ end }}</li>
+            <li>File Storage: {{ if and (.features) (.features.file) }}<span style="color: green">✓</span>{{ else }}<span style="color: red">𝘟</span>{{ end }}</li>
+            <li>Object Storage: {{ if and (.features) (.features.object) }}<span style="color: green">✓</span>{{ else }}<span style="color: red">𝘟</span>{{ end }}</li>
+            <li>Dynamic: {{ if and (.features) (.features.dynamic) }}<span style="color: green">✓</span>{{ else }}<span style="color: red">𝘟</span>{{ end }}</li>
+            <li>Snapshot: {{ if and (.features) (.features.snapshot) }}<span style="color: green">✓</span>{{ else }}<span style="color: red">𝘟</span>{{ end }}</li>
+            <li>Clones: {{ if and (.features) (.features.clone) }}<span style="color: green">✓</span>{{ else }}<span style="color: red">𝘟</span>{{ end }}</li>
+            <li>Expansion: {{ if and (.features) (.features.expansion) }}<span style="color: green">✓</span>{{ else }}<span style="color: red">𝘟</span>{{ end }}</li>
+            <li>Topology: {{ if and (.features) (.features.topology) }}<span style="color: green">✓</span>{{ else }}<span style="color: red">𝘟</span>{{ end }}</li>
+            <li>Tracking: {{ if and (.features) (.features.tracking) }}<span style="color: green">✓</span>{{ else }}<span style="color: red">𝘟</span>{{ end }}</li>
+        </ul>
+    </td>
+    <td width="220">
+        <ul>
+            <li>Read Only Many: {{ if and (.accessMode) (.accessMode.readOnlyMany) }}<span style="color: green">✓</span>{{ else }}<span style="color: red">𝘟</span>{{ end }}</li>
+            <li>Read Write Once: {{ if and (.accessMode) (.accessMode.readWriteOnce) }}<span style="color: green">✓</span>{{ else }}<span style="color: red">𝘟</span>{{ end }}</li>
+            <li>Read Write Many: {{ if and (.accessMode) (.accessMode.readWriteMany) }}<span style="color: green">✓</span>{{ else }}<span style="color: red">𝘟</span>{{ end }}</li>
+            <li>Read Write Once Pod: {{ if and (.accessMode) (.accessMode.readWriteOncePod) }}<span style="color: green">✓</span>{{ else }}<span style="color: red">𝘟</span>{{ end }}</li>
+        </ul>
+    </td>
+</tr>
+{{ end }}
+</tbody>
+</table>

@@ -1,0 +1,22 @@
+<header class="headerWrapper">
+    <div class="header">
+        <div>
+            <a class="terminal" href="{{ .Site.BaseURL }}">
+                <span>Home</span>
+            </a>
+        </div>
+        <input class="side-menu" type="checkbox" id="side-menu">
+        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+        <nav class="headerLinks">
+            <ul>
+                {{ range .Site.Menus.header.ByWeight }}
+                <li>
+                    <a href="{{ .URL | absURL }}" title="{{ .Title }}" >
+                        {{- .Name -}}
+                    </a>
+                </li>
+                {{ end }}
+            </ul>
+        </nav>
+    </div>
+</header>

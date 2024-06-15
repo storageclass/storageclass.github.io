@@ -1,0 +1,20 @@
+@use "global";
+
+// locals
+@use "table";
+
+// utils
+@use "utils/variables";
+@use "utils/fonts";
+
+// components
+@use "components/footer";
+@use "components/header";
+@use "components/post";
+@use "components/social";
+
+// pages
+@use "pages/single";
+@use "pages/list";
+@use "pages/index";
+@use "pages/baseof";
