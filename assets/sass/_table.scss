@@ -41,55 +41,60 @@
 }
 
 .search {
-    display: table-row;
+    display: table;
+    padding: 20px 0px;
 
     > div {
-        display: table-cell;
-        padding-right: 10px;
+        display: table-row;
 
-        > label {
-            padding-right: 5px;
+        > div {
+            display: table-cell;
+            padding-right: 20px;
+    
+            > label {
+                padding-right: 5px;
+            }
+    
+            .searchTerm {
+                display: inline-block;
+                background-color: white;
+                padding: 2px 5px 0px 2px;
+                border-radius: 4px;
+                border: solid 1px #ced4da;
+    
+                > input {
+                    height: 1.15em;
+                    padding: 2px;
+                    border: none;
+                    font-family: v.$fontParagraph;
+                    font-size: 90%;
+                }
+    
+                > input::placeholder {
+                    color: #0f0f0f;
+                }
+            }
         }
-
-        .searchTerm {
-            display: inline-block;
-            background-color: white;
-            padding: 2px 5px 0px 2px;
-            border-radius: 4px;
-            border: solid 1px #ced4da;
-
-            > input {
-                height: 1.15em;
-                padding: 2px;
-                border: none;
+    
+        .multiselect-dropdown {
+            .multiselect-dropdown-list {
+                > div {
+                    input {
+                        vertical-align: text-top;
+                    }
+    
+                    label {
+                        vertical-align: text-top;
+                        font-size: 90%;
+                    }
+                }
+            }
+    
+            span.placeholder {
+                color: #0f0f0f;
                 font-family: v.$fontParagraph;
                 font-size: 90%;
             }
-
-            > input::placeholder {
-                color: #0f0f0f;
-            }
-        }
-    }
-
-    .multiselect-dropdown {
-        .multiselect-dropdown-list {
-            > div {
-                input {
-                    vertical-align: text-top;
-                }
-
-                label {
-                    vertical-align: text-top;
-                    font-size: 90%;
-                }
-            }
-        }
-
-        span.placeholder {
-            color: #0f0f0f;
-            font-family: v.$fontParagraph;
-            font-size: 90%;
         }
     }
 }

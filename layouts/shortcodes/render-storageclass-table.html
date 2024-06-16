@@ -1,54 +1,56 @@
 <div class="search">
     <div>
-        <label>SearchTerm:</label>
-        <div class="searchTerm">
-            <input id="searchTerm" type="text" placeholder="Search Term" />
+        <div>
+            <label>SearchTerm:</label>
+            <div class="searchTerm">
+                <input id="searchTerm" type="text" placeholder="Search Term" />
+            </div>
         </div>
-    </div>
-    <div>
-        <label>Disk Type:</label>
-        <select id="diskTypes" name="diskTypes"
-                style="width: 200px" placeholder="Disk Types"
-                multiple multiselect-search="false"
-                multiselect-select-all="false"
-                multiselect-hide-x="true"
-        >
-            <option value="persistent">Persistent</option>
-            <option value="ephemeral">Ephemeral</option>
-        </select>
-    </div>
-    <div>
-        <label>Features:</label>
-        <select id="features" name="features"
-                style="width: 200px" placeholder="Features"
-                multiple multiselect-search="false"
-                multiselect-select-all="false"
-                multiselect-hide-x="true"
-        >
-            <option value="raw">Block Storage</option>
-            <option value="file">File Storage</option>
-            <option value="object">Object Storage</option>
-            <option value="dynamic">Dynamic Provisioning</option>
-            <option value="snapshot">Snapshot</option>
-            <option value="clone">Clones</option>
-            <option value="expansion">Expansion</option>
-            <option value="topology">Topology Aware</option>
-            <option value="tracking">Storage Tracking</option>
-        </select>
-    </div>
-    <div>
-        <label>Access Modes:</label>
-        <select id="accessModes" name="accessModes"
-                style="width: 200px" placeholder="Access Modes"
-                multiple multiselect-search="false"
-                multiselect-select-all="false"
-                multiselect-hide-x="true"
-        >
-            <option value="readOnlyMany">Read Only Many</option>
-            <option value="readWriteOnce">Read Write Once</option>
-            <option value="readWriteMany">Read Write Many</option>
-            <option value="readWriteOncePod">Read Write Once Pod</option>
-        </select>
+        <div>
+            <label>Disk Type:</label>
+            <select id="diskTypes" name="diskTypes"
+                    style="width: 200px" placeholder="Disk Types"
+                    multiple multiselect-search="false"
+                    multiselect-select-all="false"
+                    multiselect-hide-x="true"
+            >
+                <option value="persistent">Persistent</option>
+                <option value="ephemeral">Ephemeral</option>
+            </select>
+        </div>
+        <div>
+            <label>Features:</label>
+            <select id="features" name="features"
+                    style="width: 200px" placeholder="Features"
+                    multiple multiselect-search="false"
+                    multiselect-select-all="false"
+                    multiselect-hide-x="true"
+            >
+                <option value="raw">Block Storage</option>
+                <option value="file">File Storage</option>
+                <option value="object">Object Storage</option>
+                <option value="dynamic">Dynamic Provisioning</option>
+                <option value="snapshot">Snapshot</option>
+                <option value="clone">Clones</option>
+                <option value="expansion">Expansion</option>
+                <option value="topology">Topology Aware</option>
+                <option value="tracking">Storage Tracking</option>
+            </select>
+        </div>
+        <div>
+            <label>Access Modes:</label>
+            <select id="accessModes" name="accessModes"
+                    style="width: 200px" placeholder="Access Modes"
+                    multiple multiselect-search="false"
+                    multiselect-select-all="false"
+                    multiselect-hide-x="true"
+            >
+                <option value="readOnlyMany">Read Only Many</option>
+                <option value="readWriteOnce">Read Write Once</option>
+                <option value="readWriteMany">Read Write Many</option>
+                <option value="readWriteOncePod">Read Write Once Pod</option>
+            </select>
+        </div>
     </div>
 </div>
 
