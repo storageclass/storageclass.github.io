@@ -144,6 +144,7 @@ storageClasses:
       clone: false
       topology: false
       tracking: false
+      object: true
   - name: Azure Disk
     link: https://github.com/kubernetes-sigs/azuredisk-csi-driver
     driverName: disk.csi.azure.com
@@ -1625,7 +1626,7 @@ storageClasses:
     features:
       dynamic: true
       snapshot: true
-      raw: false
+      raw: true
       expansion: true
       clone: true
       topology: true
