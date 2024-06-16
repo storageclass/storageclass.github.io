@@ -2335,7 +2335,7 @@ storageClasses:
   - name: simplyblock
     link: https://www.simplyblock.io
     driverName: csi.simplyblock.io
-    description: CSI Driver for simplyblock's disaggregated Elastic Block Storage
+    description: "CSI Driver for simplyblock's disaggregated Elastic Block Storage"
     diskTypes:
       persistent: true
     accessModes:
@@ -2354,6 +2354,7 @@ storageClasses:
   - name: Harvester
     link: https://docs.harvesterhci.io/v0.3/rancher/csi-driver/
     driverName: driver.harvesterhci.io
+    description: CSI Driver for Harvester
     diskTypes:
       persistent: true
     accessModes:
