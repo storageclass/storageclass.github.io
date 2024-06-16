@@ -44,6 +44,7 @@ storageClasses:
       readWriteOncePod: false
     features:
       dynamic: false
+      object: true
   - name: Alluxio
     link: https://github.com/Alluxio/alluxio/tree/master/integration/docker/csi
     driverName: csi.alluxio.com
@@ -57,6 +58,7 @@ storageClasses:
       readWriteOncePod: false
     features:
       dynamic: true
+      file: true
   - name: ArStor CSI
     link: https://github.com/huayun-docs/csi-driver-arstor
     driverName: arstor.csi.huayun.io
@@ -109,6 +111,7 @@ storageClasses:
       readWriteOncePod: false
     features:
       dynamic: true
+      file: true
   - name: AWS FSx for Lustre
     link: https://github.com/aws/aws-fsx-csi-driver
     driverName: fsx.csi.aws.com
@@ -179,6 +182,7 @@ storageClasses:
       clone: false
       topology: false
       tracking: false
+      file: true
   - name: BeeGFS
     link: https://github.com/NetApp/beegfs-csi-driver
     driverName: beegfs.csi.netapp.com
@@ -230,6 +234,7 @@ storageClasses:
       clone: false
       topology: false
       tracking: false
+      file: true
   - name: BizFlyCloud Block Storage
     link: https://github.com/bizflycloud/csi-bizflycloud
     driverName: volume.csi.bizflycloud.vn
@@ -437,6 +442,7 @@ storageClasses:
       clone: false
       topology: false
       tracking: false
+      file: true
   - name: Datera
     link: https://github.com/Datera/datera-csi
     driverName: dsp.csi.daterainc.io
@@ -475,6 +481,7 @@ storageClasses:
       clone: false
       topology: false
       tracking: false
+      file: true
   - name: Dell EMC PowerMax
     link: https://github.com/dell/csi-powermax
     driverName: csi-powermax.dellemc.com
@@ -760,6 +767,7 @@ storageClasses:
       readWriteOncePod: false
     features:
       dynamic: true
+      file: true
   - name: Google Cloud Storage FUSE
     link: https://github.com/GoogleCloudPlatform/gcs-fuse-csi-driver
     driverName: gcsfuse.csi.storage.gke.io
@@ -1043,6 +1051,7 @@ storageClasses:
       clone: true
       topology: false
       tracking: false
+      file: true
   - name: IBM Cloud Block Storage VPC CSI Driver
     link: https://github.com/kubernetes-sigs/ibm-vpc-block-csi-driver
     driverName: vpc.block.csi.ibm.io
@@ -1154,6 +1163,7 @@ storageClasses:
       dynamic: true
       snapshot: true
       raw: false
+      file: true
       expansion: true
       clone: true
       topology: true
@@ -1211,6 +1221,7 @@ storageClasses:
       dynamic: true
       snapshot: false
       raw: false
+      file: true
       expansion: true
       clone: false
       topology: false
@@ -1279,7 +1290,7 @@ storageClasses:
       clone: false
       topology: true
       tracking: false
-  - name: Lightbits Labs
+  - name: Lightbits Labs Block
     link: https://github.com/LightBitsLabs/los-csi
     driverName: csi.lightbitslabs.com
     description: CSI Driver for Lightbits Storage
@@ -1289,15 +1300,31 @@ storageClasses:
       readOnlyMany: true
       readWriteOnce: true
       readWriteMany: true
-      readWriteOncePod: true (in volumeMode FileSystem)
-      readOnlyMany: true
-      readWriteOnce: true
-      readWriteMany: true
-      readWriteOncePod: false (in volumeMode Block)
+      readWriteOncePod: false
     features:
       dynamic: true
       snapshot: true
       raw: true
+      expansion: true
+      clone: true
+      topology: false
+      tracking: false
+  - name: Lightbits Labs File
+    link: https://github.com/LightBitsLabs/los-csi
+    driverName: csi.lightbitslabs.com
+    description: CSI Driver for Lightbits Storage
+    diskTypes:
+      persistent: true
+    accessModes:
+      readOnlyMany: true
+      readWriteOnce: true
+      readWriteMany: true
+      readWriteOncePod: true
+    features:
+      dynamic: true
+      snapshot: true
+      raw: false
+      file: true
       expansion: true
       clone: true
       topology: false
@@ -1381,6 +1408,7 @@ storageClasses:
       dynamic: true
       snapshot: true
       raw: false
+      file: true
       expansion: false
       clone: false
       topology: true
@@ -1432,6 +1460,7 @@ storageClasses:
       dynamic: true
       snapshot: true
       raw: false
+      file: true
       expansion: true
       clone: true
       topology: true
@@ -1614,6 +1643,7 @@ storageClasses:
       readWriteOncePod: false
     features:
       dynamic: true
+      file: true
   - name: oVirt
     link: https://github.com/openshift/ovirt-csi-driver
     driverName: csi.ovirt.org
@@ -1724,6 +1754,7 @@ storageClasses:
       readWriteOncePod: false
     features:
       dynamic: true
+      object: true
   - name: Quobyte
     link: https://github.com/quobyte/quobyte-csi
     driverName: quobyte-csi
@@ -1794,6 +1825,7 @@ storageClasses:
       readWriteOncePod: false
     features:
       dynamic: true
+      file: true
   - name: Sangfor-EDS-Block-Storage
     link: https://github.com/eds-wzc/sangfor-eds-csi
     driverName: eds.csi.block.sangfor.com
@@ -1807,6 +1839,7 @@ storageClasses:
       readWriteOncePod: true
     features:
       dynamic: true
+      block: true
   - name: Scaleway CSI
     link: https://github.com/scaleway/scaleway-csi
     driverName: csi.scaleway.com
@@ -2035,6 +2068,7 @@ storageClasses:
       readWriteOncePod: false
     features:
       dynamic: true
+      file: true
   - name: Tencent Cloud Object Storage
     link: https://github.com/TencentCloud/kubernetes-csi-tencentcloud
     driverName: com.tencent.cloud.csi.cosfs
@@ -2048,6 +2082,7 @@ storageClasses:
       readWriteOncePod: false
     features:
       dynamic: false
+      object: true
   - name: TopoLVM
     link: https://github.com/topolvm/topolvm
     driverName: topolvm.io
@@ -2217,6 +2252,7 @@ storageClasses:
       clone: false
       topology: true
       tracking: false
+      file: true
   - name: vSphere (Block Storage)
     link: https://github.com/kubernetes-sigs/vsphere-csi-driver
     driverName: csi.vsphere.vmware.com
@@ -2262,6 +2298,7 @@ storageClasses:
       readWriteOncePod: false
     features:
       dynamic: true
+      file: true
   - name: Yandex.Cloud
     link: https://github.com/flant/yandex-csi-driver
     driverName: yandex.csi.flant.com
