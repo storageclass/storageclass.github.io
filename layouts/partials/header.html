@@ -9,6 +9,11 @@
         <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
         <nav class="headerLinks">
             <ul>
+                <li>
+                    <a href="https://github.com/storageclass/storageclass.github.io" target="_blank">
+                        GitHub
+                    </a>
+                </li>
                 {{ range .Site.Menus.header.ByWeight }}
                 <li>
                     <a href="{{ .URL | absURL }}" title="{{ .Title }}" >
