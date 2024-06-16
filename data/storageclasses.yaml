@@ -2351,3 +2351,15 @@ storageClasses:
       clone: true
       topology: false
       tracking: false
+  - name: Harvester
+    link: https://docs.harvesterhci.io/v0.3/rancher/csi-driver/
+    driverName: driver.harvesterhci.io
+    diskTypes:
+      persistent: true
+    accessModes:
+      readWriteOnce: true
+    features:
+      snapshot: false
+      tracking: false
+      expansion: true
+      dynamic: true
