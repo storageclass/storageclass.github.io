@@ -31,7 +31,7 @@ The Container Storage Interface (CSI) is a standard for exposing storage systems
 
 The CSI defines a set of features that can be executed. Some features are mandatory, some are optional.
 
-- **Dynamic Provisioning** provides the option to automatically provision volumes when requested through a Persistent Volume Claim.
+- **[Dynamic Provisioning](https://kubernetes.io/docs/concepts/storage/dynamic-provisioning/)** provides the option to automatically provision volumes when requested through a Persistent Volume Claim.
 - **[Snapshotting](https://kubernetes-csi.github.io/docs/snapshot-restore-feature.html)** provides the option to create snapshots of the current storage state through Kubernetes.
 - **[Clonening](https://kubernetes-csi.github.io/docs/volume-cloning.html)** provides the option to create clones of a volume through Kubernetes.
 - **[Expanding](https://kubernetes-csi.github.io/docs/volume-expansion.html)** provides the option to expand an existing volume through Kubernetes.
