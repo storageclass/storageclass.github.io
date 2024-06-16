@@ -1,6 +1,6 @@
 ---
 menus: header
-title: Available StorageClasses
+title: StorageClasses Listing
 weight: 2
 showMetadata: false
 ---

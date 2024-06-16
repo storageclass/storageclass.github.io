@@ -1,0 +1,7 @@
+Kubernetes Volumes are resources that provide ephemeral or persistent storage to your pods. A single volume represents a single logical storage entity, such as a directory, block, object, or file storage device. Volumes are generall bound to the lifecycle of the pod and are created, updated, and deleted automatically, respective to the pod’s lifecycle. In this case, the volume is provisioned automatically using the Dynamic Provisioning feature. Alternatively they are managed manually, the so-called static provisioning.
+
+For dynamic provisioning, the required volume parameters can be configured in the persistent volume claim directly. This, however, can induce issues into the managed of volumes if many volumes need to be managed or updated. Therefore, the SIG 
+
+One of the advantages of Kubernetes is its extensibility, and with that to deploy applications with the resources they need. By default, application Pods created by Kubernetes have readable and writable disk space, however this disk space is ephemeral and will disappear 
+
+This website provides an explanation of [what a Kubernetes StorageClass is](/whatis), as well as, how it is being used. Additionally, this page contains a fully searchable and filterable [list of available Kubernetes storage classes](/storageclasses).
