@@ -214,7 +214,7 @@ storageClasses:
   - name: Bigtera VirtualStor (filesystem)
     link: https://github.com/bigtera-ce/ceph-csi
     driverName: csi.fs.bigtera.com
-    description: A Container Storage Interface (CSI)  Driver for Bigtera VirtualStor filesystem
+    description: CSI Driver for for Bigtera VirtualStor filesystem
     diskTypes:
       persistent: true
     accessModes:
@@ -271,7 +271,7 @@ storageClasses:
   - name: Ceph RBD
     link: https://github.com/ceph/ceph-csi
     driverName: rbd.csi.ceph.com
-    description: A Container Storage Interface (CSI)  Driver for Ceph RBD
+    description: CSI Driver for Ceph RBD
     diskTypes:
       persistent: true
     accessModes:
@@ -402,7 +402,7 @@ storageClasses:
   - name: Datatom-InfinityCSI
     link: https://github.com/datatom-infinity/infinity-csi
     driverName: csi-infiblock-plugin
-    description: A Container Storage Interface (CSI)  Driver for DATATOM Infinity storage
+    description: CDI Driver for DATATOM Infinity storage
     diskTypes:
       persistent: true
     accessModes:
@@ -421,7 +421,7 @@ storageClasses:
   - name: Datatom-InfinityCSI (filesystem)
     link: https://github.com/datatom-infinity/infinity-csi
     driverName: csi-infifs-plugin
-    description: A Container Storage Interface (CSI)  Driver for DATATOM Infinity filesystem storage
+    description: CDI Driver for DATATOM Infinity filesystem storage
     diskTypes:
       persistent: true
     accessModes:
@@ -888,7 +888,7 @@ storageClasses:
   - name: HPE
     link: https://github.com/hpe-storage/csi-driver
     driverName: csi.hpe.com
-    description: A [multi-platform](https://scod.hpedev.io/csi_driver) Container Storage Interface (CSI) driver. Supports [HPE Alletra](https://hpe.com/storage/alletra), [Nimble Storage](https://hpe.com/storage/nimble), [Primera](https://hpe.com/storage/primera) and [3PAR](https://hpe.com/storage/3par)
+    description: CSI Driver for HPE storage servers, [multi-platform](https://scod.hpedev.io/csi_driver). Supports [HPE Alletra](https://hpe.com/storage/alletra), [Nimble Storage](https://hpe.com/storage/nimble), [Primera](https://hpe.com/storage/primera) and [3PAR](https://hpe.com/storage/3par)
     diskTypes:
       persistent: true
       ephemeral: true
@@ -991,7 +991,7 @@ storageClasses:
   - name: IBM Block Storage
     link: https://github.com/ibm/ibm-block-csi-driver
     driverName: block.csi.ibm.com
-    description: A Container Storage Interface (CSI) [Driver](https://www.ibm.com/docs/en/stg-block-csi-driver) for IBM Spectrum Virtualize Family, IBM FlashSystem A9000 and A9000R, IBM DS8000 Family 8.x and higher.
+    description: CSI [Driver](https://www.ibm.com/docs/en/stg-block-csi-driver) for IBM Spectrum Virtualize Family, IBM FlashSystem A9000 and A9000R, IBM DS8000 Family 8.x and higher.
     diskTypes:
       persistent: true
     accessModes:
@@ -1010,7 +1010,7 @@ storageClasses:
   - name: IBM Storage Scale
     link: https://github.com/IBM/ibm-spectrum-scale-csi
     driverName: spectrumscale.csi.ibm.com
-    description: A Container Storage Interface (CSI) [Driver](https://www.ibm.com/docs/en/spectrum-scale-csi) for the IBM Storage Scale File System
+    description: CSI [Driver](https://www.ibm.com/docs/en/spectrum-scale-csi) for the IBM Storage Scale File System
     diskTypes:
       persistent: true
     accessModes:
@@ -1029,7 +1029,7 @@ storageClasses:
   - name: IBM Cloud Block Storage VPC CSI Driver
     link: https://github.com/kubernetes-sigs/ibm-vpc-block-csi-driver
     driverName: vpc.block.csi.ibm.io
-    description: A Container Storage Interface (CSI) [Driver](https://cloud.ibm.com/docs/containers?topic=containers-vpc-block) for IBM Cloud Kubernetes Service and Red Hat OpenShift on IBM Cloud
+    description: CSI [Driver](https://cloud.ibm.com/docs/containers?topic=containers-vpc-block) for IBM Cloud Kubernetes Service and Red Hat OpenShift on IBM Cloud
     diskTypes:
       persistent: true
     accessModes:
@@ -1214,7 +1214,7 @@ storageClasses:
   - name: kaDalu
     link: https://github.com/kadalu/kadalu
     driverName: org.kadalu.gluster
-    description: A CSI Driver (and operator) for GlusterFS
+    description: CSI Driver (and operator) for GlusterFS
     diskTypes:
       persistent: true
     accessModes:
@@ -1470,7 +1470,7 @@ storageClasses:
       clone: false
       topology: false
       tracking: false
-  - name: Nutanix
+  - name: Nutanix Volumes
     link: https://github.com/nutanix/csi-plugin
     driverName: csi.nutanix.com
     description: CSI Driver for Nutanix
@@ -1480,7 +1480,26 @@ storageClasses:
       readOnlyMany: true
       readWriteOnce: true
       readWriteMany: true
-      readWriteOncePod: true" with Nutanix Volumes and "Read/Write Multiple Pods" with Nutanix Files
+      readWriteOncePod: false
+    features:
+      dynamic: true
+      snapshot: true
+      raw: true
+      expansion: true
+      clone: true
+      topology: false
+      tracking: false
+  - name: Nutanix Files
+    link: https://github.com/nutanix/csi-plugin
+    driverName: csi.nutanix.com
+    description: CSI Driver for Nutanix
+    diskTypes:
+      persistent: true
+    accessModes:
+      readOnlyMany: true
+      readWriteOnce: true
+      readWriteMany: true
+      readWriteOncePod: true
     features:
       dynamic: true
       snapshot: true
@@ -1774,7 +1793,7 @@ storageClasses:
   - name: Scaleway CSI
     link: https://github.com/scaleway/scaleway-csi
     driverName: csi.scaleway.com
-    description: Container Storage Interface (CSI) Driver for [Scaleway Block Storage](https://www.scaleway.com/block-storage/)
+    description: CSI Driver for [Scaleway Block Storage](https://www.scaleway.com/block-storage/)
     diskTypes:
       persistent: true
     accessModes:
@@ -1812,7 +1831,7 @@ storageClasses:
   - name: SeaweedFS
     link: https://github.com/seaweedfs/seaweedfs-csi-driver
     driverName: seaweedfs-csi-driver
-    description: A Container Storage Interface (CSI Driver for [SeaweedFS](https://github.com/chrislusf/seaweedfs))
+    description: CSI Driver for [SeaweedFS](https://github.com/chrislusf/seaweedfs))
     diskTypes:
       persistent: true
     accessModes:
@@ -1853,7 +1872,7 @@ storageClasses:
   - name: SMB
     link: https://github.com/kubernetes-csi/csi-driver-smb
     driverName: smb.csi.k8s.io
-    description: This driver allows Kubernetes to access SMB Server on both Linux and Windows nodes
+    description: CSI Driver to allow Kubernetes to access SMB Server on both Linux and Windows nodes
     diskTypes:
       persistent: true
     accessModes:
