@@ -2335,7 +2335,7 @@ storageClasses:
   - name: simplyblock
     link: https://www.simplyblock.io
     driverName: csi.simplyblock.io
-    description: "CSI Driver for simplyblock's disaggregated Elastic Block Storage"
+    description: "CSI Driver for simplyblock's disaggregated Elastic Block Storage utilizing NVMe over TCP"
     diskTypes:
       persistent: true
     accessModes:
