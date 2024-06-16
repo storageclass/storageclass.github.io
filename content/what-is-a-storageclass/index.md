@@ -1,9 +1,9 @@
 ---
 menus: header
 title: What is a StorageClass?
+description: Kubernetes provides an extensible storage interface, defining ephemeral or persistent volumes, persistent volume claims, and storage classes.
 weigth: 1
 showMetadata: false
-description: Kubernetes provides an extensible storage interface, defining ephemeral or persistent volumes, persistent volume claims, and storage classes.
 ---
 
 Kubernetes, the popular container orchestration platform, provides a robust and flexible system for managing containerized applications. One of its powerful features is the ability to manage ephemeral and persistent storage using an interface called StorageClass, specified by the SIG Storage in the Container Storage Interface (CSI) specification.
