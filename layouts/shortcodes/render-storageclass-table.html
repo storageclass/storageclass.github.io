@@ -129,27 +129,33 @@
         let filteredStorageClasses = storageClasses;
         if (term.length > 0) {
             filteredStorageClasses = filteredStorageClasses.filter(storageClass => 
-                storageClass.name.toLowerCase().indexOf(term) != -1 ||
-                storageClass.driverName.toLowerCase().indexOf(term) != -1 ||
-                storageClass.description.toLowerCase().indexOf(term) != -1
+                (storageClass.name && storageClass.name.toLowerCase().indexOf(term) != -1) ||
+                (storageClass.driverName && storageClass.driverName.toLowerCase().indexOf(term) != -1) ||
+                (storageClass.description && storageClass.description.toLowerCase().indexOf(term) != -1)
             );
         }
 
         if (selectedDiskTypes.length > 0) {
             filteredStorageClasses = filteredStorageClasses.filter(storageClass =>
-                selectedDiskTypes.find(diskType => !storageClass.diskTypes[diskType]) === undefined
+                selectedDiskTypes.find(diskType => 
+                    storageClass.diskTypes && !storageClass.diskTypes[diskType]
+                ) === undefined
             );
         }
 
         if (selectedFeatures.length > 0) {
             filteredStorageClasses = filteredStorageClasses.filter(storageClass =>
-                selectedFeatures.find(feature => !storageClass.features[feature]) === undefined
+                selectedFeatures.find(feature => 
+                    storageClass.features && !storageClass.features[feature]
+                ) === undefined
             );
         }
 
         if (selectedAccessModes.length > 0) {
             filteredStorageClasses = filteredStorageClasses.filter(storageClass =>
-                selectedAccessModes.find(accessMode => storageClass.accessModes && !storageClass.accessModes[accessMode]) === undefined
+                selectedAccessModes.find(accessMode => 
+                    storageClass.accessModes && !storageClass.accessModes[accessMode]
+                ) === undefined
             );
         }
 
