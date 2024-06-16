@@ -1,6 +1,7 @@
 ---
 menus: header
 title: StorageClasses Listing
+description: Searchable listing of Kubernetes volume providers (Kubernetes CSI). Find your perfect implementation based on features, access modes, and more.
 weight: 2
 showMetadata: false
 tags:
