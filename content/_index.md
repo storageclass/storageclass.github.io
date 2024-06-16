@@ -4,4 +4,6 @@ For dynamic provisioning, the required volume parameters can be configured in th
 
 One of the advantages of Kubernetes is its extensibility, and with that to deploy applications with the resources they need. By default, application Pods created by Kubernetes have readable and writable disk space, however this disk space is ephemeral and will disappear 
 
-This website provides an explanation of [what a Kubernetes StorageClass is](/whatis), as well as, how it is being used. Additionally, this page contains a fully searchable and filterable [list of available Kubernetes storage classes](/storageclasses).
+This website provides
+- an explanation of [what a Kubernetes StorageClass is](/whatis), as well as, how it is being used.
+- a fully searchable and filterable [list of available Kubernetes StorageClass implementations](/storageclasses)
