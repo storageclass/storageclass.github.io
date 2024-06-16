@@ -573,7 +573,7 @@ storageClasses:
       clone: true
       topology: true
       tracking: false
-  - name: democratic-csi
+  - name: democratic-csi Block
     link: https://github.com/democratic-csi/democratic-csi
     driverName: org.democratic-csi.[X]
     description: Generic CSI plugin supporting zfs based solutions ([FreeNAS](https://www.freenas.org/) / [TrueNAS](https://www.truenas.com/) and [ZoL](https://zfsonlinux.org/) solutions such as [Ubuntu](https://ubuntu.com/)), [Synology](https://www.synology.com/), and more
@@ -584,15 +584,32 @@ storageClasses:
       readOnlyMany: true
       readWriteOnce: true
       readWriteMany: true
-      readWriteOncePod: true (Block Volume) <br/><br/>
-      readOnlyMany: true
-      readWriteOnce: true
-      readWriteMany: true
-      readWriteOncePod: false (File Volume)
+      readWriteOncePod: true
     features:
       dynamic: true
       snapshot: true
       raw: true
+      expansion: true
+      clone: true
+      topology: false
+      tracking: false
+  - name: democratic-csi File
+    link: https://github.com/democratic-csi/democratic-csi
+    driverName: org.democratic-csi.[X]
+    description: Generic CSI plugin supporting zfs based solutions ([FreeNAS](https://www.freenas.org/) / [TrueNAS](https://www.truenas.com/) and [ZoL](https://zfsonlinux.org/) solutions such as [Ubuntu](https://ubuntu.com/)), [Synology](https://www.synology.com/), and more
+    diskTypes:
+      persistent: true
+      ephemeral: true
+    accessModes:
+      readOnlyMany: true
+      readWriteOnce: true
+      readWriteMany: true
+      readWriteOncePod: false
+    features:
+      dynamic: true
+      snapshot: true
+      raw: false
+      file: true
       expansion: true
       clone: true
       topology: false
