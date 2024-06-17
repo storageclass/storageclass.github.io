@@ -1,4 +1,4 @@
-### storageclass.info
+# storageclass.info
 This repository is the basis to generate [https://www.storageclass.info](https://www.storageclass.info), an informational page about [Kubernetes CSI](https://kubernetes-csi.github.io/) drivers. CSI drivers are used to extend Kubernetes' with external storage solutions, providing pods with ephemeral and persistent volumes.
 
 In addition, storageclass.info provides a searchable list of CSI driver implementations. Driver vendors are highly asked to help extend this list and fix potential issues of the capabilities of their implementations. The neccessary file containing all those implementations can be found [here](https://github.com/storageclass/storageclass.github.io/tree/main/data). Please feel free to fork the repository, add/update/fix the information, and send a pull request.
