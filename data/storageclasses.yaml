@@ -2364,3 +2364,15 @@ storageClasses:
       tracking: false
       expansion: true
       dynamic: true
+  - name: DirectPV
+    link: https://min.io/directpv
+    driverName: directpv.min.io
+    description: CSI Driver which implements a Direct Attached Storage
+    lifecycleModes:
+      persistent: true
+      ephemeral: true
+    capabilities:
+      file: true
+      dynamic: true
+      expansion: true
+      topology: true
