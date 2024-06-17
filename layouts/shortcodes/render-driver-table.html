@@ -45,6 +45,7 @@
                     multiselect-select-all="false"
                     multiselect-hide-x="true"
             >
+                <option value="readOnlyOnce">Read Only Once</option>
                 <option value="readOnlyMany">Read Only Many</option>
                 <option value="readWriteOnce">Read Write Once</option>
                 <option value="readWriteMany">Read Write Many</option>
@@ -57,8 +58,8 @@
 <table class="alternating">
 <thead>
     <tr>
-        <td>Name</td>
         <td>Driver Name</td>
+        <td>Driver Class</td>
         <td>Description</td>
         <td>Lifecycle Modes</td>
         <td>Supported Capabilities</td>
@@ -66,10 +67,10 @@
     </tr>
 </thead>
 <tbody>
-{{ range sort .Site.Data.storageclasses.storageClasses "name" "asc" }}
+{{ range sort .Site.Data.csidrivers.drivers "name" "asc" }}
 <tr id="{{- .name -}}">
     <td><a href="{{- .link -}}" rel="nofollow noopener" target="_blank">{{- .name -}}</a></td>
-    <td>{{- .driverName -}} </td>
+    <td>{{- .driverClass -}} </td>
     <td>{{ .description | $.Page.RenderString }}</td>
     <td width="150">
         <ul>
@@ -104,64 +105,64 @@
 </table>
 
 <script language="javascript" type="text/javascript">
-    const storageClasses = {{- .Site.Data.storageclasses.storageClasses -}};
+    const drivers = {{- .Site.Data.csidrivers.drivers -}};
 
     const searchTerm = document.getElementById("searchTerm");
     const lifecycleModes = document.getElementById("lifecycleModes");
     const capabilities = document.getElementById("capabilities");
     const accessModes = document.getElementById("accessModes");
 
-    const filterStoragesClasses = () => {
+    const filterCsiDrivers = () => {
         const term = searchTerm.value.toLowerCase();
         const selectedLifecycleModes = Array.from(lifecycleModes.selectedOptions).map(option => option.value);
         const selectedCapabilities = Array.from(capabilities.selectedOptions).map(option => option.value);
         const selectedAccessModes = Array.from(accessModes.selectedOptions).map(option => option.value);
 
         if (term.length === 0 && lifecycleModes.length === 0 && selectedCapabilities.length === 0 && accessModes.length === 0) {
-            storageClasses.forEach(storageClass => {
-                const row = document.getElementById(storageClass.name);
+            drivers.forEach(driver => {
+                const row = document.getElementById(driver.name);
                 row.removeAttribute("style");
                 row.removeAttribute("hidden");
             });
             return false;
         }
 
-        let filteredStorageClasses = storageClasses;
+        let filteredDrivers = drivers;
         if (term.length > 0) {
-            filteredStorageClasses = filteredStorageClasses.filter(storageClass => 
-                (storageClass.name && storageClass.name.toLowerCase().indexOf(term) != -1) ||
-                (storageClass.driverName && storageClass.driverName.toLowerCase().indexOf(term) != -1) ||
-                (storageClass.description && storageClass.description.toLowerCase().indexOf(term) != -1)
+            filteredDrivers = filteredDrivers.filter(driver => 
+                (driver.name && driver.name.toLowerCase().indexOf(term) != -1) ||
+                (driver.driverClass && driver.driverClass.toLowerCase().indexOf(term) != -1) ||
+                (driver.description && driver.description.toLowerCase().indexOf(term) != -1)
             );
         }
 
         if (selectedLifecycleModes.length > 0) {
-            filteredStorageClasses = filteredStorageClasses.filter(storageClass =>
+            filteredDrivers = filteredDrivers.filter(driver =>
             selectedLifecycleModes.find(lifecycleMode => 
-                    storageClass.lifecycleModes && !storageClass.lifecycleModes[lifecycleMode]
+            driver.lifecycleModes && !driver.lifecycleModes[lifecycleMode]
                 ) === undefined
             );
         }
 
         if (selectedCapabilities.length > 0) {
-            filteredStorageClasses = filteredStorageClasses.filter(storageClass =>
+            filteredDrivers = filteredDrivers.filter(driver =>
             selectedCapabilities.find(capability => 
-                    storageClass.capabilities && !storageClass.capabilities[capability]
+            driver.capabilities && !driver.capabilities[capability]
                 ) === undefined
             );
         }
 
         if (selectedAccessModes.length > 0) {
-            filteredStorageClasses = filteredStorageClasses.filter(storageClass =>
+            filteredDrivers = filteredDrivers.filter(driver =>
                 selectedAccessModes.find(accessMode => 
-                    storageClass.accessModes && !storageClass.accessModes[accessMode]
+                driver.accessModes && !driver.accessModes[accessMode]
                 ) === undefined
             );
         }
 
-        storageClasses.forEach(storageClass => {
-            const row = document.getElementById(storageClass.name);
-            if (filteredStorageClasses.find(item => item.name == storageClass.name) !== undefined) {
+        drivers.forEach(driver => {
+            const row = document.getElementById(driver.name);
+            if (filteredDrivers.find(item => item.name == driver.name) !== undefined) {
                 row.removeAttribute("style");
                 row.removeAttribute("hidden");
             } else {
@@ -174,16 +175,16 @@
     };
 
     searchTerm.oninput = function() {
-        return filterStoragesClasses();
+        return filterCsiDrivers();
     }
     lifecycleModes.onchange = function() {
-        return filterStoragesClasses();
+        return filterCsiDrivers();
     }
     capabilities.onchange = function() {
-        return filterStoragesClasses();
+        return filterCsiDrivers();
     }
     accessModes.onchange = function() {
-        return filterStoragesClasses();
+        return filterCsiDrivers();
     }
 </script>
 
