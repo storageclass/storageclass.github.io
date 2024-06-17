@@ -3,7 +3,7 @@ storageClasses:
     link: https://github.com/kubernetes-sigs/alibaba-cloud-csi-driver
     driverName: diskplugin.csi.alibabacloud.com	
     description: CSI Driver for an AlibabaCloud Disk
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -22,7 +22,7 @@ storageClasses:
     link: https://github.com/kubernetes-sigs/alibaba-cloud-csi-driver
     driverName: nasplugin.csi.alibabacloud.com
     description: CSI Driver for AlibabaCloud Network Attached Storage (NAS)
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -35,7 +35,7 @@ storageClasses:
     link: https://github.com/kubernetes-sigs/alibaba-cloud-csi-driver
     driverName: ossplugin.csi.alibabacloud.com
     description: CSI Driver for AlibabaCloud Object Storage Service (OSS)
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -49,7 +49,7 @@ storageClasses:
     link: https://github.com/Alluxio/alluxio/tree/master/integration/docker/csi
     driverName: csi.alluxio.com
     description: CSI Driver for Alluxio File System)
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -63,7 +63,7 @@ storageClasses:
     link: https://github.com/huayun-docs/csi-driver-arstor
     driverName: arstor.csi.huayun.io
     description: CSI Driver for Huayun Storage Service (ArStor)
-    diskTypes:
+    lifecycleModes:
       persistent: true
       ephemeral: true
     accessModes:
@@ -83,7 +83,7 @@ storageClasses:
     link: https://github.com/kubernetes-sigs/aws-ebs-csi-driver
     driverName: ebs.csi.aws.com
     description: CSI Driver for AWS Elastic Block Storage (EBS)
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -102,7 +102,7 @@ storageClasses:
     link: https://github.com/aws/aws-efs-csi-driver
     driverName: efs.csi.aws.com
     description: CSI Driver for AWS Elastic File System (EFS)
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -116,7 +116,7 @@ storageClasses:
     link: https://github.com/aws/aws-fsx-csi-driver
     driverName: fsx.csi.aws.com
     description: CSI Driver for AWS FSx for Lustre (EBS)
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -129,7 +129,7 @@ storageClasses:
     link: https://github.com/kubernetes-sigs/blob-csi-driver
     driverName: blob.csi.azure.com
     description: CSI Driver for Azure Blob storage
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -149,7 +149,7 @@ storageClasses:
     link: https://github.com/kubernetes-sigs/azuredisk-csi-driver
     driverName: disk.csi.azure.com
     description: CSI Driver for Azure Disk
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -168,7 +168,7 @@ storageClasses:
     link: https://github.com/kubernetes-sigs/azurefile-csi-driver
     driverName: file.csi.azure.com
     description: CSI Driver for Azure File
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -188,7 +188,7 @@ storageClasses:
     link: https://github.com/NetApp/beegfs-csi-driver
     driverName: beegfs.csi.netapp.com
     description: CSI Driver for the [BeeGFS](https://www.beegfs.io/) Parallel File System
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -201,7 +201,7 @@ storageClasses:
     link: https://github.com/bigtera-ce/ceph-csi
     driverName: csi.block.bigtera.com
     description: CSI Driver for Bigtera VirtualStor block storage
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -220,7 +220,7 @@ storageClasses:
     link: https://github.com/bigtera-ce/ceph-csi
     driverName: csi.fs.bigtera.com
     description: CSI Driver for for Bigtera VirtualStor filesystem
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -240,7 +240,7 @@ storageClasses:
     link: https://github.com/bizflycloud/csi-bizflycloud
     driverName: volume.csi.bizflycloud.vn
     description: CSI Driver for BizFly Cloud block storage
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -259,7 +259,7 @@ storageClasses:
     link: https://github.com/ceph/ceph-csi
     driverName: cephfs.csi.ceph.com
     description: CSI Driver for CephFS
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -278,7 +278,7 @@ storageClasses:
     link: https://github.com/ceph/ceph-csi
     driverName: rbd.csi.ceph.com
     description: CSI Driver for Ceph RBD
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -297,7 +297,7 @@ storageClasses:
     link: https://cert-manager.io/docs/usage/csi-driver/
     driverName: csi.cert-manager.io
     description: Uses [cert-manager](https://cert-manager.io) to provision secretless X.509 certificates for pods via ephemeral CSI volumes
-    diskTypes:
+    lifecycleModes:
       ephemeral: true
     accessModes:
       readOnlyMany: true
@@ -310,7 +310,7 @@ storageClasses:
     link: https://cert-manager.io/docs/usage/csi-driver-spiffe/
     driverName: spiffe.csi.cert-manager.io
     description: Uses [cert-manager](https://cert-manager.io) to provision X.509 [SPIFFE SVIDs](https://spiffe.io/docs/latest/spiffe-about/spiffe-concepts/#spiffe-verifiable-identity-document-svid) for pods via ephemeral CSI volumes
-    diskTypes:
+    lifecycleModes:
       ephemeral: true
     accessModes:
       readOnlyMany: true
@@ -323,7 +323,7 @@ storageClasses:
     link: https://github.com/ciscohyperflex/csi-plugin
     driverName: HX-CSI
     description: CSI Driver for Cisco HyperFlex
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -342,7 +342,7 @@ storageClasses:
     link: https://github.com/cubefs/cubefs-csi
     driverName: csi.cubefs.com
     description: CSI Driver for CubeFS Storage
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -355,7 +355,7 @@ storageClasses:
     link: https://github.com/kubernetes/cloud-provider-openstack/tree/master/pkg/csi/cinder
     driverName: cinder.csi.openstack.org
     description: CSI Driver for OpenStack Cinder
-    diskTypes:
+    lifecycleModes:
       persistent: true
       ephemeral: true
     accessModes:
@@ -371,7 +371,7 @@ storageClasses:
     link: https://github.com/cloudscale-ch/csi-cloudscale
     driverName: csi.cloudscale.ch
     description: CSI Driver for the [cloudscale.ch](https://www.cloudscale.ch/) IaaS platform
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -390,7 +390,7 @@ storageClasses:
     link: https://ctdi-storage.github.io/
     driverName: csi.block.ctdi.com
     description: CSI Driver for CTDI Distributed Block Storage
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -409,7 +409,7 @@ storageClasses:
     link: https://github.com/datatom-infinity/infinity-csi
     driverName: csi-infiblock-plugin
     description: CDI Driver for DATATOM Infinity storage
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -428,7 +428,7 @@ storageClasses:
     link: https://github.com/datatom-infinity/infinity-csi
     driverName: csi-infifs-plugin
     description: CDI Driver for DATATOM Infinity filesystem storage
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -448,7 +448,7 @@ storageClasses:
     link: https://github.com/Datera/datera-csi
     driverName: dsp.csi.daterainc.io
     description: CSI Driver for Datera Data Services Platform (DSP)
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -467,7 +467,7 @@ storageClasses:
     link: https://github.com/DDNStorage/exa-csi-driver
     driverName: exa.csi.ddn.com
     description: CSI Driver for DDN EXAScaler filesystems
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -487,7 +487,7 @@ storageClasses:
     link: https://github.com/dell/csi-powermax
     driverName: csi-powermax.dellemc.com
     description: CSI Driver for [Dell EMC PowerMax](https://www.delltechnologies.com/en-us/storage/powermax.htm)
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -506,7 +506,7 @@ storageClasses:
     link: https://github.com/dell/csi-powerscale
     driverName: csi-isilon.dellemc.com
     description: CSI Driver for [Dell EMC PowerScale](https://www.delltechnologies.com/en-us/storage/powerscale.htm)
-    diskTypes:
+    lifecycleModes:
       persistent: true
       ephemeral: true
     accessModes:
@@ -526,7 +526,7 @@ storageClasses:
     link: https://github.com/dell/csi-powerstore
     driverName: csi-powerstore.dellemc.com
     description: CSI Driver for [Dell EMC PowerStore](https://www.delltechnologies.com/en-us/storage/powerstore-storage-appliance.htm)
-    diskTypes:
+    lifecycleModes:
       persistent: true
       ephemeral: true
     accessModes:
@@ -546,7 +546,7 @@ storageClasses:
     link: https://github.com/dell/csi-unity
     driverName: csi-unity.dellemc.com
     description: CSI Driver for [Dell EMC Unity](https://www.delltechnologies.com/en-us/storage/unity.htm)
-    diskTypes:
+    lifecycleModes:
       persistent: true
       ephemeral: true
     accessModes:
@@ -566,7 +566,7 @@ storageClasses:
     link: https://github.com/dell/csi-vxflexos
     driverName: csi-vxflexos.dellemc.com
     description: CSI Driver for [Dell EMC VxFlexOS](https://www.delltechnologies.com/en-us/hyperconverged-infrastructure/vxflex.htm)
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -585,7 +585,7 @@ storageClasses:
     link: https://github.com/democratic-csi/democratic-csi
     driverName: org.democratic-csi.[X]
     description: Generic CSI plugin supporting zfs based solutions ([FreeNAS](https://www.freenas.org/) / [TrueNAS](https://www.truenas.com/) and [ZoL](https://zfsonlinux.org/) solutions such as [Ubuntu](https://ubuntu.com/)), [Synology](https://www.synology.com/), and more
-    diskTypes:
+    lifecycleModes:
       persistent: true
       ephemeral: true
     accessModes:
@@ -605,7 +605,7 @@ storageClasses:
     link: https://github.com/democratic-csi/democratic-csi
     driverName: org.democratic-csi.[X]
     description: Generic CSI plugin supporting zfs based solutions ([FreeNAS](https://www.freenas.org/) / [TrueNAS](https://www.truenas.com/) and [ZoL](https://zfsonlinux.org/) solutions such as [Ubuntu](https://ubuntu.com/)), [Synology](https://www.synology.com/), and more
-    diskTypes:
+    lifecycleModes:
       persistent: true
       ephemeral: true
     accessModes:
@@ -626,7 +626,7 @@ storageClasses:
     link: https://diamanti.com/use-cases/io-acceleration/#csi
     driverName: dcx.csi.diamanti.com
     description: CSI Driver for Diamanti DCX Platform
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -645,7 +645,7 @@ storageClasses:
     link: https://github.com/digitalocean/csi-digitalocean
     driverName: dobs.csi.digitalocean.com
     description: CSI Driver for DigitalOcean Block Storage
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -664,7 +664,7 @@ storageClasses:
     link: https://github.com/enix/dothill-csi
     driverName: dothill.csi.enix.io
     description: Generic CSI plugin supporting [Seagate AssuredSan](https://www.seagate.com/fr/fr/support/dothill-san/assuredsan-pro-5000-series/) appliances such as [HPE MSA](https://www.hpe.com/us/en/storage/flash-hybrid.html), [Dell EMC PowerVault ME4](https://www.dell.com/fr-fr/work/shop/productdetailstxn/powervault-me4-series) and others ...
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -683,7 +683,7 @@ storageClasses:
     link: https://ember-csi.io
     driverName: '[x].ember-csi.io'
     description: Multi-vendor CSI plugin supporting over 80 Drivers to provide block and mount storage to Container Orchestration systems.
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -702,7 +702,7 @@ storageClasses:
     link: https://github.com/Excelero/nvmesh-csi-driver
     driverName: nvmesh-csi.excelero.com
     description: CSI Driver for Excelero NVMesh
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -721,7 +721,7 @@ storageClasses:
     link: https://github.com/exoscale/exoscale-csi-driver
     driverName: csi.exoscale.com
     description: CSI Driver for Exoscale Block Storage
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -740,7 +740,7 @@ storageClasses:
     link: https://github.com/kubernetes-sigs/gcp-compute-persistent-disk-csi-driver
     driverName: pd.csi.storage.gke.io
     description: CSI Driver for Google Compute Engine Persistent Disk (GCE PD)
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -759,7 +759,7 @@ storageClasses:
     link: https://github.com/kubernetes-sigs/gcp-filestore-csi-driver
     driverName: filestore.csi.storage.gke.io
     description: CSI Driver for Google Cloud Filestore
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -773,7 +773,7 @@ storageClasses:
     link: https://github.com/GoogleCloudPlatform/gcs-fuse-csi-driver
     driverName: gcsfuse.csi.storage.gke.io
     description: CSI Driver for [Google Cloud Storage FUSE](https://cloud.google.com/storage/docs/gcs-fuse)
-    diskTypes:
+    lifecycleModes:
       persistent: true
       ephemeral: true
     accessModes:
@@ -787,7 +787,7 @@ storageClasses:
     link: https://github.com/ofek/csi-gcs
     driverName: gcs.csi.ofek.dev
     description: CSI Driver for Google Cloud Storage
-    diskTypes:
+    lifecycleModes:
       persistent: true
       ephemeral: true
     accessModes:
@@ -807,7 +807,7 @@ storageClasses:
     link: https://github.com/gluster/gluster-csi-driver
     driverName: org.gluster.glusterfs
     description: CSI Driver for GlusterFS
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -826,7 +826,7 @@ storageClasses:
     link: https://github.com/gluster/gluster-csi-driver
     driverName: org.gluster.glustervirtblock
     description: CSI Driver for Gluster Virtual Block volumes
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -839,7 +839,7 @@ storageClasses:
     link: https://github.com/hammer-space/csi-plugin
     driverName: com.hammerspace.csi
     description: CSI Driver for Hammerspace Storage
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -858,7 +858,7 @@ storageClasses:
     link: https://documentation.commvault.com/commvault/hedvig/others/pdf/Hedvig_CSI_User_Guide.pdf
     driverName: io.hedvig.csi
     description: CSI Driver for Hedvig
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -877,7 +877,7 @@ storageClasses:
     link: https://github.com/hetznercloud/csi-driver
     driverName: csi.hetzner.cloud
     description: CSI Driver for Hetzner Cloud Volumes
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -896,7 +896,7 @@ storageClasses:
     link: https://knowledge.hitachivantara.com/Documents/Adapters_and_Drivers/Storage_Adapters_and_Drivers/Containers
     driverName: hspc.csi.hitachi.com
     description: CSI Driver for VSP series Storage
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -915,7 +915,7 @@ storageClasses:
     link: https://github.com/hpe-storage/csi-driver
     driverName: csi.hpe.com
     description: CSI Driver for HPE storage servers, [multi-platform](https://scod.hpedev.io/csi_driver). Supports [HPE Alletra](https://hpe.com/storage/alletra), [Nimble Storage](https://hpe.com/storage/nimble), [Primera](https://hpe.com/storage/primera) and [3PAR](https://hpe.com/storage/3par)
-    diskTypes:
+    lifecycleModes:
       persistent: true
       ephemeral: true
     accessModes:
@@ -935,7 +935,7 @@ storageClasses:
     link: https://github.com/HewlettPackard/lustre-csi-driver
     driverName: lustre-csi.hpe.com
     description: CSI Driver for HPE Cray ClusterStor Lustre Storage
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -948,7 +948,7 @@ storageClasses:
     link: https://github.com/mapr/mapr-csi
     driverName: com.mapr.csi-kdf
     description: CSI Driver for HPE Ezmeral Data Fabric
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -967,7 +967,7 @@ storageClasses:
     link: https://github.com/Huawei/eSDK_K8S_Plugin
     driverName: csi.huawei.com
     description: CSI Driver for FusionStorage, OceanStor 100D, OceanStor Pacific, OceanStor Dorado V3, OceanStor Dorado V6, OceanStor V3, OceanStor V5
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -986,7 +986,7 @@ storageClasses:
     link: https://github.com/hwameistor/hwameistor
     driverName: lvm.hwameistor.io disk.hwameistor.io
     description: CSI Driver for Local Storage
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -1005,7 +1005,7 @@ storageClasses:
     link: https://github.com/Zetanova/hyperv-csi-driver
     driverName: eu.zetanova.csi.hyperv
     description: CSI Driver to manage hyperv hosts
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -1018,7 +1018,7 @@ storageClasses:
     link: https://github.com/ibm/ibm-block-csi-driver
     driverName: block.csi.ibm.com
     description: CSI [Driver](https://www.ibm.com/docs/en/stg-block-csi-driver) for IBM Spectrum Virtualize Family, IBM FlashSystem A9000 and A9000R, IBM DS8000 Family 8.x and higher.
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -1037,7 +1037,7 @@ storageClasses:
     link: https://github.com/IBM/ibm-spectrum-scale-csi
     driverName: spectrumscale.csi.ibm.com
     description: CSI [Driver](https://www.ibm.com/docs/en/spectrum-scale-csi) for the IBM Storage Scale File System
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -1057,7 +1057,7 @@ storageClasses:
     link: https://github.com/kubernetes-sigs/ibm-vpc-block-csi-driver
     driverName: vpc.block.csi.ibm.io
     description: CSI [Driver](https://cloud.ibm.com/docs/containers?topic=containers-vpc-block) for IBM Cloud Kubernetes Service and Red Hat OpenShift on IBM Cloud
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -1076,7 +1076,7 @@ storageClasses:
     link: https://github.com/Infinidat/infinibox-csi-driver
     driverName: infinibox-csi-driver
     description: CSI Driver for Infinidat [InfiniBox](https://infinidat.com/en/products-technology/infinibox)
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -1095,7 +1095,7 @@ storageClasses:
     link: https://github.com/OpenInspur/instorage-k8s
     driverName: csi-instorage
     description: CSI Driver for inspur AS/HF/CS/CF Series Primary Storage, inspur AS13000 SAN/NAS/Object Series SDS Storage
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -1114,7 +1114,7 @@ storageClasses:
     link: https://github.com/intel/pmem-csi
     driverName: pmem-csi.intel.com
     description: CSI Driver for [PMEM](https://pmem.io/) from Intel
-    diskTypes:
+    lifecycleModes:
       persistent: true
       ephemeral: true
     accessModes:
@@ -1134,7 +1134,7 @@ storageClasses:
     link: https://github.com/DDNStorage/intelliflash-csi-block-driver
     driverName: intelliflash-csi-block-driver.intelliflash.com
     description: CSI Driver for Intelliflash  Block Storage
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -1153,7 +1153,7 @@ storageClasses:
     link: https://github.com/DDNStorage/intelliflash-csi-file-driver
     driverName: intelliflash-csi-file-driver.intelliflash.com
     description: CSI Driver for Intelliflash  File Storage
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -1173,7 +1173,7 @@ storageClasses:
     link: https://github.com/ionir-cloud
     driverName: ionir
     description: CSI Driver for [ionir](https://www.ionir.com/) Kubernetes-Native Storage
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -1192,7 +1192,7 @@ storageClasses:
     link: https://github.com/jd-opensource/jdcsp-csi/
     driverName: jdcsp-block.csi.jdcloud.com
     description: CSI Driver for JD-CSP Block
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -1211,7 +1211,7 @@ storageClasses:
     link: https://github.com/jd-opensource/jdcsp-csi/
     driverName: jdcsp-file.csi.jdcloud.com
     description: CSI Driver for JD-CSP Filesystem
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -1231,7 +1231,7 @@ storageClasses:
     link: https://github.com/juicedata/juicefs-csi-driver
     driverName: csi.juicefs.com
     description: CSI Driver for JuiceFS File System
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -1244,7 +1244,7 @@ storageClasses:
     link: https://github.com/kadalu/kadalu
     driverName: org.kadalu.gluster
     description: CSI Driver (and operator) for GlusterFS
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -1257,7 +1257,7 @@ storageClasses:
     link: https://github.com/kaixiangtech/csi-driver-flexblock
     driverName: flexblock.csi.kaixiangtech.com
     description: CSI Driver for KaiXiangTech MegaBric Storage
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -1276,7 +1276,7 @@ storageClasses:
     link: https://github.com/KioxiaAmerica/kumoscale-csi
     driverName: kumoscale.kioxia.com
     description: CSI Driver for KumoScale Block Storage
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -1295,7 +1295,7 @@ storageClasses:
     link: https://github.com/LightBitsLabs/los-csi
     driverName: csi.lightbitslabs.com
     description: CSI Driver for Lightbits Storage
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -1314,7 +1314,7 @@ storageClasses:
     link: https://github.com/LightBitsLabs/los-csi
     driverName: csi.lightbitslabs.com
     description: CSI Driver for Lightbits Storage
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -1334,7 +1334,7 @@ storageClasses:
     link: https://github.com/linode/linode-blockstorage-csi-driver
     driverName: linodebs.csi.linode.com
     description: CSI Driver for Linode Block Storage
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -1347,7 +1347,7 @@ storageClasses:
     link: https://github.com/piraeusdatastore/linstor-csi
     driverName: linstor.csi.linbit.com
     description: CSI Driver for [LINSTOR](https://www.linbit.com/en/linstor/) volumes
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -1366,7 +1366,7 @@ storageClasses:
     link: https://github.com/longhorn/longhorn
     driverName: driver.longhorn.io
     description: CSI Driver for [Longhorn](https://longhorn.io/) volumes
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -1385,7 +1385,7 @@ storageClasses:
     link: https://github.com/macrosan-csi/macrosan-csi-driver
     driverName: csi-macrosan
     description: CSI Driver for MacroSAN Block Storage
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -1398,7 +1398,7 @@ storageClasses:
     link: https://github.com/kubernetes/cloud-provider-openstack/tree/master/pkg/csi/manila
     driverName: manila.csi.openstack.org
     description: CSI Driver for OpenStack Shared File System Service (Manila)
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -1418,7 +1418,7 @@ storageClasses:
     link: https://github.com/moosefs/moosefs-csi
     driverName: com.tuxera.csi.moosefs
     description: CSI Driver for [MooseFS](https://moosefs.com/) clusters.
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -1431,7 +1431,7 @@ storageClasses:
     link: https://github.com/NetApp/trident
     driverName: csi.trident.netapp.io
     description: CSI Driver for NetApp's [Trident](https://docs.netapp.com/us-en/trident/index.html) container storage orchestrator
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -1450,7 +1450,7 @@ storageClasses:
     link: https://github.com/Nexenta/nexentastor-csi-driver
     driverName: nexentastor-csi-driver.nexenta.com
     description: CSI Driver for NexentaStor  File Storage
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -1470,7 +1470,7 @@ storageClasses:
     link: https://github.com/Nexenta/nexentastor-csi-driver-block
     driverName: nexentastor-block-csi-driver.nexenta.com
     description: CSI Driver for NexentaStor over iSCSI protocol
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -1489,7 +1489,7 @@ storageClasses:
     link: https://github.com/kubernetes-csi/csi-driver-nfs
     driverName: nfs.csi.k8s.io
     description: This driver allows Kubernetes to access NFS server on Linux node.
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -1502,7 +1502,7 @@ storageClasses:
     link: https://github.com/NGXStorage/iscsi-csi-ngxstorage-driver
     driverName: iscsi.csi.ngxstorage.com
     description: CSI Driver for NGXStorage over iSCSI protocol
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -1521,7 +1521,7 @@ storageClasses:
     link: https://github.com/nutanix/csi-plugin
     driverName: csi.nutanix.com
     description: CSI Driver for Nutanix
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -1540,7 +1540,7 @@ storageClasses:
     link: https://github.com/nutanix/csi-plugin
     driverName: csi.nutanix.com
     description: CSI Driver for Nutanix
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -1559,7 +1559,7 @@ storageClasses:
     link: https://github.com/openebs/csi
     driverName: cstor.csi.openebs.io
     description: CSI Driver for  [OpenEBS](https://www.openebs.io/)
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -1578,7 +1578,7 @@ storageClasses:
     link: https://github.com/open-e/JovianDSS-KubernetesCSI
     driverName: com.open-e.joviandss.csi
     description: CSI Driver for Open-E JovianDSS Storage
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -1597,7 +1597,7 @@ storageClasses:
     link: https://github.com/alibaba/open-local
     driverName: local.csi.alibaba.com
     description: CSI Driver for Local Storage
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -1616,7 +1616,7 @@ storageClasses:
     link: https://github.com/oracle/oci-cloud-controller-manager/blob/master/container-storage-interface.md
     driverName: blockvolume.csi.oraclecloud.com
     description: CSI Driver for Oracle Cloud Infrastructure (OCI) Block Storage
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -1635,7 +1635,7 @@ storageClasses:
     link: https://github.com/oracle/oci-cloud-controller-manager/blob/master/container-storage-interface.md
     driverName: fss.csi.oraclecloud.com
     description: CSI Driver for Oracle Cloud Infrastructure (OCI) File Storage
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -1649,7 +1649,7 @@ storageClasses:
     link: https://github.com/openshift/ovirt-csi-driver
     driverName: csi.ovirt.org
     description: CSI Driver for [oVirt](https://ovirt.org)
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -1669,7 +1669,7 @@ storageClasses:
     link: https://github.com/libopenstorage/openstorage/tree/master/csi
     driverName: pxd.portworx.com
     description: CSI Driver for [Portworx](https://docs.portworx.com/portworx-install-with-kubernetes/storage-operations/csi/)
-    diskTypes:
+    lifecycleModes:
       persistent: true
       ephemeral: true
     accessModes:
@@ -1683,13 +1683,13 @@ storageClasses:
       raw: true
       expansion: true
       clone: true
-      topology: false
+      topology: true
       tracking: false
   - name: Proxmox
     link: https://github.com/sergelogvinov/proxmox-csi-plugin
     driverName: csi.proxmox.sinextra.dev
     description: CSI Driver for [Proxmox](https://www.proxmox.com/en/)
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -1708,7 +1708,7 @@ storageClasses:
     link: https://github.com/yunify/qingcloud-csi
     driverName: disk.csi.qingcloud.com
     description: CSI Driver for QingCloud Block Storage
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -1727,7 +1727,7 @@ storageClasses:
     link: https://github.com/yunify/qingstor-csi
     driverName: neonsan.csi.qingstor.com
     description: CSI Driver for NeonSAN storage system
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -1746,7 +1746,7 @@ storageClasses:
     link: https://github.com/qiniu/csi-driver
     driverName: kodoplugin.storage.qiniu.com
     description: CSI Driver for Qiniu Object Storage (Kodo)
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -1760,7 +1760,7 @@ storageClasses:
     link: https://github.com/quobyte/quobyte-csi
     driverName: quobyte-csi
     description: CSI Driver for Quobyte
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -1779,7 +1779,7 @@ storageClasses:
     link: https://get.robin.io/
     driverName: robin
     description: CSI Driver for [ROBIN](https://docs.robin.io)
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -1798,7 +1798,7 @@ storageClasses:
     link: https://github.com/sandstone-storage/sandstone-csi-driver
     driverName: csi-sandstone-plugin
     description: CSI Driver for SandStone USP
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -1817,7 +1817,7 @@ storageClasses:
     link: https://github.com/evan37717/sangfor-eds-csi
     driverName: eds.csi.file.sangfor.com
     description: CSI Driver for Sangfor Distributed File Storage(EDS)
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -1831,7 +1831,7 @@ storageClasses:
     link: https://github.com/eds-wzc/sangfor-eds-csi
     driverName: eds.csi.block.sangfor.com
     description: CSI Driver for Sangfor Block Storage(EDS)
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -1845,7 +1845,7 @@ storageClasses:
     link: https://github.com/scaleway/scaleway-csi
     driverName: csi.scaleway.com
     description: CSI Driver for [Scaleway Block Storage](https://www.scaleway.com/block-storage/)
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -1864,7 +1864,7 @@ storageClasses:
     link: https://github.com/Seagate/seagate-exos-x-csi
     driverName: csi-exos-x.seagate.com
     description: CSI driver for [Seagate Exos X](https://www.seagate.com/products/storage/data-storage-systems/raid/) and OEM systems
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -1883,7 +1883,7 @@ storageClasses:
     link: https://github.com/seaweedfs/seaweedfs-csi-driver
     driverName: seaweedfs-csi-driver
     description: CSI Driver for [SeaweedFS](https://github.com/chrislusf/seaweedfs))
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -1896,7 +1896,7 @@ storageClasses:
     link: https://github.com/kubernetes-sigs/secrets-store-csi-driver
     driverName: secrets-store.csi.k8s.io
     description: CSI Driver for mounting secrets, keys, and certs stored in enterprise-grade external secrets stores as volumes.
-    diskTypes:
+    lifecycleModes:
       ephemeral: true
     accessModes:
     capabilities:
@@ -1905,7 +1905,7 @@ storageClasses:
     link: https://www.smartx.com/?locale=en
     driverName: csi-smtx-plugin
     description: CSI Driver for SmartX ZBS Storage
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -1924,7 +1924,7 @@ storageClasses:
     link: https://github.com/kubernetes-csi/csi-driver-smb
     driverName: smb.csi.k8s.io
     description: CSI Driver to allow Kubernetes to access SMB Server on both Linux and Windows nodes
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -1937,7 +1937,7 @@ storageClasses:
     link: https://github.com/sodafoundation/nbp/tree/master/csi
     driverName: csi-soda-plugin
     description: CSI Driver for [SODA](https://sodafoundation.io/)
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -1956,7 +1956,7 @@ storageClasses:
     link: https://github.com/spdk/spdk-csi
     driverName: csi.spdk.io
     description: CSI Driver for [SPDK](https://spdk.io/)
-    diskTypes:
+    lifecycleModes:
       persistent: true
       ephemeral: true
     accessModes:
@@ -1970,7 +1970,7 @@ storageClasses:
     link: https://docs.storageos.com/docs/platforms/kubernetes/install/
     driverName: storageos
     description: CSI Driver for [StorageOS](https://storageos.com/)
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -1983,7 +1983,7 @@ storageClasses:
     link: https://docs.storidge.com/kubernetes_storage/overview.html
     driverName: csi.cio.storidge.com
     description: CSI Driver for [Storidge CIO](https://storidge.com/)
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -2002,7 +2002,7 @@ storageClasses:
     link: https://kb.storpool.com/storpool_integrations/github/kubernetes.html
     driverName: csi-driver.storpool.com
     description: CSI Driver for [StorPool](https://storpool.com/)
-    diskTypes:
+    lifecycleModes:
       persistent: true
       ephemeral: true
     accessModes:
@@ -2022,7 +2022,7 @@ storageClasses:
     link: https://github.com/SynologyOpenSource/synology-csi
     driverName: csi.san.synology.com
     description: CSI Driver for Synology NAS
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -2041,7 +2041,7 @@ storageClasses:
     link: https://github.com/TencentCloud/kubernetes-csi-tencentcloud
     driverName: com.tencent.cloud.csi.cbs
     description: CSI Driver for Tencent Cloud Block Storage
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -2060,7 +2060,7 @@ storageClasses:
     link: https://github.com/TencentCloud/kubernetes-csi-tencentcloud
     driverName: com.tencent.cloud.csi.cfs
     description: CSI Driver for Tencent Cloud File Storage
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -2074,7 +2074,7 @@ storageClasses:
     link: https://github.com/TencentCloud/kubernetes-csi-tencentcloud
     driverName: com.tencent.cloud.csi.cosfs
     description: CSI Driver for Tencent Cloud Object Storage
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -2088,7 +2088,7 @@ storageClasses:
     link: https://github.com/topolvm/topolvm
     driverName: topolvm.io
     description: CSI Driver for LVM
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -2107,7 +2107,7 @@ storageClasses:
     link: https://github.com/TydsManagement/Toyou-CSI
     driverName: csi.toyou.com
     description: CSI Driver for [Toyou Storage](https://www.toyou.com.cn/)
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -2120,7 +2120,7 @@ storageClasses:
     link: https://github.com/hpe-storage/truenas-csp
     driverName: csi.hpe.com
     description: A community supported [Container Storage Provider](https://github.com/hpe-storage/container-storage-provider) (CSP) that leverages the HPE CSI Driver for Kubernetes. Works with TrueNAS CORE, TrueNAS SCALE and FreeNAS using iSCSI only
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -2139,7 +2139,7 @@ storageClasses:
     link: https://github.com/vast-data/vast-csi
     driverName: csi.vastdata.com
     description: CSI Driver for VAST Data
-    diskTypes:
+    lifecycleModes:
       persistent: true
       ephemeral: true
     accessModes:
@@ -2159,7 +2159,7 @@ storageClasses:
     link: https://xsky-storage.github.io/xsky-csi-driver/csi-block.html
     driverName: csi.block.xsky.com
     description: CSI Driver for XSKY Distributed Block Storage (X-EBS)
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -2178,7 +2178,7 @@ storageClasses:
     link: https://xsky-storage.github.io/xsky-csi-driver/csi-fs.html
     driverName: csi.fs.xsky.com
     description: CSI Driver for XEDP，XEUS，XUDS，XGFS，X3000，X5000
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -2197,7 +2197,7 @@ storageClasses:
     link: https://github.com/kubevault/csi-driver
     driverName: secrets.csi.kubevault.com
     description: CSI Driver for mounting HashiCorp Vault secrets as volumes.
-    diskTypes:
+    lifecycleModes:
       ephemeral: true
     accessModes:
     capabilities:
@@ -2206,7 +2206,7 @@ storageClasses:
     link: https://virtual-disk-array.readthedocs.io/en/latest/Introduction.html
     driverName: csi.vda.io
     description: An open source block storage system base on SPDK
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -2219,7 +2219,7 @@ storageClasses:
     link: https://www.veritas.com/solution/virtualization/containers.html
     driverName: org.veritas.infoscale
     description: CSI Driver for Veritas InfoScale volumes
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -2238,7 +2238,7 @@ storageClasses:
     link: https://github.com/kubernetes-sigs/vsphere-csi-driver
     driverName: csi.vsphere.vmware.com
     description: CSI Driver for VMware vSphere
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -2258,7 +2258,7 @@ storageClasses:
     link: https://github.com/kubernetes-sigs/vsphere-csi-driver
     driverName: csi.vsphere.vmware.com
     description: CSI Driver for VMware vSphere
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -2277,7 +2277,7 @@ storageClasses:
     link: https://github.com/vultr/vultr-csi
     driverName: block.csi.vultr.com
     description: CSI Driver for Vultr Block Storage
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -2290,7 +2290,7 @@ storageClasses:
     link: https://github.com/weka/csi-wekafs
     driverName: csi.weka.io
     description: CSI Driver for mounting WekaIO WekaFS filesystem as volumes
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -2304,7 +2304,7 @@ storageClasses:
     link: https://github.com/flant/yandex-csi-driver
     driverName: yandex.csi.flant.com
     description: CSI Driver for Yandex.Cloud Compute Disks
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -2317,7 +2317,7 @@ storageClasses:
     link: https://www.yanrongyun.com/
     driverName: csi.zadara.com
     description: CSI Driver for Zadara VPSA Storage Array & VPSA All-Flash
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -2336,7 +2336,7 @@ storageClasses:
     link: https://www.simplyblock.io
     driverName: csi.simplyblock.io
     description: "CSI Driver for simplyblock's disaggregated Elastic Block Storage utilizing NVMe over TCP"
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readOnlyMany: true
@@ -2355,7 +2355,7 @@ storageClasses:
     link: https://docs.harvesterhci.io/v0.3/rancher/csi-driver/
     driverName: driver.harvesterhci.io
     description: CSI Driver for Harvester
-    diskTypes:
+    lifecycleModes:
       persistent: true
     accessModes:
       readWriteOnce: true

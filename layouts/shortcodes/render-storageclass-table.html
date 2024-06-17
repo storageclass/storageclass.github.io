@@ -7,9 +7,9 @@
             </div>
         </div>
         <div>
-            <label>Suitable Disk Type:</label>
-            <select id="diskTypes" name="diskTypes"
-                    style="width: 200px" placeholder="Disk Types"
+            <label>Lifecycle Modes:</label>
+            <select id="lifecycleModes" name="lifecycleModes"
+                    style="width: 200px" placeholder="Lifecycle Modes"
                     multiple multiselect-search="false"
                     multiselect-select-all="false"
                     multiselect-hide-x="true"
@@ -60,7 +60,7 @@
         <td>Name</td>
         <td>Driver Name</td>
         <td>Description</td>
-        <td>Suitable for Disk Type</td>
+        <td>Lifecycle Modes</td>
         <td>Supported Capabilities</td>
         <td>Access Modes</td>
     </tr>
@@ -73,8 +73,8 @@
     <td>{{ .description | $.Page.RenderString }}</td>
     <td width="150">
         <ul>
-            <li>Persistent: {{ if and (.diskTypes) (.diskTypes.persistent) }}<span style="color: green">✓</span>{{ else }}<span style="color: red">𝘟</span>{{ end }}</li>
-            <li>Ephemeral: {{ if and (.diskTypes) (.diskTypes.ephemeral) }}<span style="color: green">✓</span>{{ else }}<span style="color: red">𝘟</span>{{ end }}</li>
+            <li>Persistent: {{ if  (.lifecycleModes.persistent) }}<span style="color: green">✓</span>{{ else }}<span style="color: red">𝘟</span>{{ end }}</li>
+            <li>Ephemeral: {{ if and (.lifecycleModes) (.lifecycleModes.ephemeral) }}<span style="color: green">✓</span>{{ else }}<span style="color: red">𝘟</span>{{ end }}</li>
         </ul>
     </td>
     <td width="180">
@@ -107,17 +107,17 @@
     const storageClasses = {{- .Site.Data.storageclasses.storageClasses -}};
 
     const searchTerm = document.getElementById("searchTerm");
-    const diskTypes = document.getElementById("diskTypes");
+    const lifecycleModes = document.getElementById("lifecycleModes");
     const capabilities = document.getElementById("capabilities");
     const accessModes = document.getElementById("accessModes");
 
     const filterStoragesClasses = () => {
         const term = searchTerm.value.toLowerCase();
-        const selectedDiskTypes = Array.from(diskTypes.selectedOptions).map(option => option.value);
+        const selectedLifecycleModes = Array.from(lifecycleModes.selectedOptions).map(option => option.value);
         const selectedCapabilities = Array.from(capabilities.selectedOptions).map(option => option.value);
         const selectedAccessModes = Array.from(accessModes.selectedOptions).map(option => option.value);
 
-        if (term.length === 0 && diskTypes.length === 0 && selectedCapabilities.length === 0 && accessModes.length === 0) {
+        if (term.length === 0 && lifecycleModes.length === 0 && selectedCapabilities.length === 0 && accessModes.length === 0) {
             storageClasses.forEach(storageClass => {
                 const row = document.getElementById(storageClass.name);
                 row.removeAttribute("style");
@@ -135,18 +135,18 @@
             );
         }
 
-        if (selectedDiskTypes.length > 0) {
+        if (selectedLifecycleModes.length > 0) {
             filteredStorageClasses = filteredStorageClasses.filter(storageClass =>
-                selectedDiskTypes.find(diskType => 
-                    storageClass.diskTypes && !storageClass.diskTypes[diskType]
+            selectedLifecycleModes.find(lifecycleMode => 
+                    storageClass.lifecycleModes && !storageClass.lifecycleModes[lifecycleMode]
                 ) === undefined
             );
         }
 
         if (selectedCapabilities.length > 0) {
             filteredStorageClasses = filteredStorageClasses.filter(storageClass =>
-            selectedCapabilities.find(feature => 
-                    storageClass.capabilities && !storageClass.capabilities[feature]
+            selectedCapabilities.find(capability => 
+                    storageClass.capabilities && !storageClass.capabilities[capability]
                 ) === undefined
             );
         }
@@ -176,7 +176,7 @@
     searchTerm.oninput = function() {
         return filterStoragesClasses();
     }
-    diskTypes.onchange = function() {
+    lifecycleModes.onchange = function() {
         return filterStoragesClasses();
     }
     capabilities.onchange = function() {
