@@ -52,6 +52,10 @@
                 <option value="readWriteOncePod">Read Write Once Pod</option>
             </select>
         </div>
+        <div>
+            <label>Filter Deprecated:</label>
+            <input type="checkbox" id="deprecated" name="deprecated" checked="checked" />
+        </div>
     </div>
 </div>
 
@@ -111,15 +115,29 @@
     const lifecycleModes = document.getElementById("lifecycleModes");
     const capabilities = document.getElementById("capabilities");
     const accessModes = document.getElementById("accessModes");
+    const deprecated = document.getElementById("deprecated");
 
     const filterCsiDrivers = () => {
         const term = searchTerm.value.toLowerCase();
         const selectedLifecycleModes = Array.from(lifecycleModes.selectedOptions).map(option => option.value);
         const selectedCapabilities = Array.from(capabilities.selectedOptions).map(option => option.value);
         const selectedAccessModes = Array.from(accessModes.selectedOptions).map(option => option.value);
+        const removeDeprecated = deprecated.checked;
+
+        // Prefilter deprecated drivers if unwanted
+        const deprecatedDrivers = drivers.filter(driver => driver.deprecated);
+        const baseDrivers = removeDeprecated ? drivers.filter(driver => !driver.deprecated) : drivers;
+
+        if (deprecatedDrivers.length > 0) {
+            deprecatedDrivers.forEach(driver => {
+                const row = document.getElementById(driver.name);
+                row.removeAttribute("style");
+                row.removeAttribute("hidden");
+            });
+        }
 
         if (term.length === 0 && lifecycleModes.length === 0 && selectedCapabilities.length === 0 && accessModes.length === 0) {
-            drivers.forEach(driver => {
+            baseDrivers.forEach(driver => {
                 const row = document.getElementById(driver.name);
                 row.removeAttribute("style");
                 row.removeAttribute("hidden");
@@ -127,7 +145,7 @@
             return false;
         }
 
-        let filteredDrivers = drivers;
+        let filteredDrivers = baseDrivers;
         if (term.length > 0) {
             filteredDrivers = filteredDrivers.filter(driver => 
                 (driver.name && driver.name.toLowerCase().indexOf(term) != -1) ||
@@ -174,6 +192,9 @@
         return true;
     };
 
+    deprecated.onclick = function() {
+        return filterCsiDrivers();
+    }
     searchTerm.oninput = function() {
         return filterCsiDrivers();
     }
