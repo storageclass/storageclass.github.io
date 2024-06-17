@@ -2462,6 +2462,8 @@ drivers:
     docsLink: https://github.com/minio/directpv/blob/master/docs/README.md
     driverClass: directpv.min.io
     description: CSI Driver which implements a Direct Attached Storage
+    accessModes:
+      readWriteOnce: true
     lifecycleModes:
       persistent: true
       ephemeral: true
@@ -2475,6 +2477,8 @@ drivers:
     docsLink: https://github.com/dell/csi-baremetal/blob/master/docs/README.md
     driverClass: csi-baremetal.dell.com
     description: CSI Driver which implements a Direct Attached Storage
+    accessModes:
+      readWriteOnce: true
     lifecycleModes:
       persistent: true
       ephemeral: true
@@ -2487,7 +2491,153 @@ drivers:
     deprecated: true
     driverClass: csi-baremetal.dell.com
     description: CSI Driver which attaches a SSHFS mount
+    accessModes:
+      readWriteOnce: true
     lifecycleModes:
       persistent: true
     capabilities:
       file: true
+  - name: Carina (Block)
+    link: https://github.com/carina-io/carina
+    docsLink: https://github.com/carina-io/carina/tree/main/docs
+    driverClass: carina.storage.io
+    description: CSI Driver for local volume storage groups
+    accessModes:
+      readWriteOnce: true
+    lifecycleModes:
+      persistent: true
+      ephemeral: true
+    capabilities:
+      dynamic: true
+      raw: true
+      expansion: true
+  - name: Carina (File)
+    link: https://github.com/carina-io/carina
+    docsLink: https://github.com/carina-io/carina/tree/main/docs
+    driverClass: carina.storage.io
+    description: CSI Driver for local volume storage groups
+    accessModes:
+      readWriteOnce: true
+    lifecycleModes:
+      persistent: true
+      ephemeral: true
+    capabilities:
+      dynamic: true
+      file: true
+      expansion: true
+  - name: UpCloud
+    link: https://github.com/DGollings/csi-upcloud
+    deprecated: true
+    driverClass: storage.csi.upcloud.com
+    accessModes:
+      readWriteOnce: true
+    lifecycleModes:
+      persistent: true
+    capabilities:
+      raw: true
+  - name: csi-libvirt
+    link: https://github.com/LuxChanLu/csi-libvirt
+    driverClass: lu.lxc.csi.libvirt
+    description: CSI Driver for volumes through libvirt VMs
+    accessModes:
+      readWriteOnce: true
+    lifecycleModes:
+      persistent: true
+    capabilities:
+      dynamic: true
+      raw: true
+      expansion: true
+      tracking: true
+  - name: Xelon CSI
+    link: https://github.com/Xelon-AG/xelon-csi
+    driverClass: csi.xelon.ch
+    description: CSI Driver for Xelon Kubernetes
+    accessModes:
+      readOnlyMany: true
+      readWriteOnce: true
+      readWriteMany: true
+    lifecycleModes:
+      persistent: true
+    capabilities:
+      dynamic: true
+      raw: true
+      expansion: true
+  - name: BizFly Cloud Volume
+    link: https://github.com/bizflycloud/csi-bizflycloud
+    driverClass: volume.csi.bizflycloud.vn
+    description: CSI Driver for the BizFly Cloud
+    accessModes:
+      readOnlyMany: true
+      readWriteOnce: true
+      readWriteMany: true
+    lifecycleModes:
+      persistent: true
+    capabilities:
+      raw: true
+      dynamic: true
+      expansion: true
+      snapshot: true
+  - name: constellation-aws-ebs-csi-driver
+    link: https://github.com/edgelesssys/constellation-aws-ebs-csi-driver
+    driverClass: aws.csi.confidential.cloud
+    description: CSI Driver for AWS EBS volumes extended with volume encryption
+    accessModes:
+      readOnlyMany: true
+      readWriteOnce: true
+      readWriteMany: true
+    lifecycleModes:
+      persistent: true
+    capabilities:
+      raw: true
+      dynamic: true
+      snapshot: true
+      expansion: true
+  - name: constellation-azuredisk-csi-driver
+    link: https://github.com/edgelesssys/constellation-azuredisk-csi-driver
+    driverClass: azuredisk.csi.confidential.cloud
+    description: CSI Driver for Azure Disks extended with volume encryption
+    accessModes:
+      readOnlyMany: true
+      readWriteOnce: true
+      readWriteMany: true
+    lifecycleModes:
+      persistent: true
+    capabilities:
+      raw: true
+      dynamic: true
+      snapshot: true
+      expansion: true
+      clone: true
+      topology: true
+  - name: constellation-cloud-provider-openstack
+    link: https://github.com/edgelesssys/constellation-cloud-provider-openstack
+    driverClass: cinder.csi.confidential.cloud
+    description: CSI Driver for OpenStack Cinder extended with volume encryption
+    accessModes:
+      readOnlyMany: true
+      readWriteOnce: true
+      readWriteMany: true
+    lifecycleModes:
+      persistent: true
+    capabilities:
+      raw: true
+      dynamic: true
+      snapshot: true
+      expansion: true
+      clone: true
+      topology: true
+  - name: constellation-gcp-compute-persistent-disk-csi-driver
+    link: https://github.com/edgelesssys/constellation-gcp-compute-persistent-disk-csi-driver
+    driverClass: gcp.csi.confidential.cloud
+    description: CSI Driver for GCP Persistent Disks extended with volume encryption
+    accessModes:
+      readOnlyMany: true
+      readWriteOnce: true
+      readWriteMany: true
+    lifecycleModes:
+      persistent: true
+    capabilities:
+      raw: true
+      dynamic: true
+      snapshot: true
+      expansion: true

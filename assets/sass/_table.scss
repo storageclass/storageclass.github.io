@@ -1,5 +1,6 @@
 @use "utils/variables" as v;
 
+
 .alternating {
     border-style: solid;
     border-color: rgba($color: #000000, $alpha: 0.4);
@@ -35,6 +36,18 @@
             td {
                 padding-left: 10px;
                 padding-right: 10px;
+
+                .icon {
+                    img {
+                        filter: invert(100%);
+                        vertical-align: middle;
+                    }
+                }
+
+                .icon:hover {
+                    text-decoration: none;
+                    filter: invert(20%) sepia(4);
+                }
             }
         }
     }

@@ -73,7 +73,15 @@
 <tbody>
 {{ range sort .Site.Data.csidrivers.drivers "name" "asc" }}
 <tr id="{{- .name -}}">
-    <td><a href="{{- .link -}}" rel="nofollow noopener" target="_blank">{{- .name -}}</a></td>
+    <td>
+        <a href="{{- .link -}}" rel="nofollow noopener" target="_blank" class="icon">
+            {{ if (hasPrefix .link "https://github.com") }} <img src="/svg/github.svg" height="18" /> {{ else }} <img src="/svg/house.svg" height="18" /> {{ end }}
+        </a>
+        <a href="{{ if .docsLink }} {{- .docsLink -}} {{ else }} {{- .link -}} {{ end }}" rel="nofollow noopener" target="_blank" class="icon">
+            <img src="/svg/book.svg" height="18" />
+        </a>
+        <a href="{{- .link -}}" rel="nofollow noopener" target="_blank">{{- .name -}}</a>
+    </td>
     <td>{{- .driverClass -}} </td>
     <td>{{ .description | $.Page.RenderString }}</td>
     <td width="150">
