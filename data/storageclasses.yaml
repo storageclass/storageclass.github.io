@@ -1,27 +1,27 @@
 storageClasses:
-  - name: Alicloud Disk
-    link: https://github.com/AliyunContainerService/csi-plugin
+  - name: AlibabaCloud Disk
+    link: https://github.com/kubernetes-sigs/alibaba-cloud-csi-driver
     driverName: diskplugin.csi.alibabacloud.com	
-    description: CSI Driver for an Alicloud Disk
+    description: CSI Driver for an AlibabaCloud Disk
     diskTypes:
       persistent: true
     accessModes:
       readOnlyMany: true
       readWriteOnce: true
-      readWriteMany: true
+      readWriteMany: false
       readWriteOncePod: true
     features:
       dynamic: true
       snapshot: true
       raw: true
-      expansion: false
+      expansion: true
       clone: false
-      topology: false
+      topology: true
       tracking: false
-  - name: Alicloud NAS
-    link: https://github.com/AliyunContainerService/csi-plugin
+  - name: AlibabaCloud Nas
+    link: https://github.com/kubernetes-sigs/alibaba-cloud-csi-driver
     driverName: nasplugin.csi.alibabacloud.com
-    description: CSI Driver for Alicloud Network Attached Storage (NAS)
+    description: CSI Driver for AlibabaCloud Network Attached Storage (NAS)
     diskTypes:
       persistent: true
     accessModes:
@@ -30,11 +30,11 @@ storageClasses:
       readWriteMany: true
       readWriteOncePod: false
     features:
-      dynamic: false
-  - name: Alicloud OSS
-    link: https://github.com/AliyunContainerService/csi-plugin
+      dynamic: true
+  - name: AlibabaCloud Oss
+    link: https://github.com/kubernetes-sigs/alibaba-cloud-csi-driver
     driverName: ossplugin.csi.alibabacloud.com
-    description: CSI Driver for Alicloud Object Storage Service (OSS)
+    description: CSI Driver for AlibabaCloud Object Storage Service (OSS)
     diskTypes:
       persistent: true
     accessModes:
