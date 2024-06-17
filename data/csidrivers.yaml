@@ -680,7 +680,7 @@ drivers:
       topology: false
       tracking: false
   - name: Ember CSI
-    link: https://ember-csi.io
+    link: https://github.com/embercsi/ember-csi
     driverClass: '[x].ember-csi.io'
     description: Multi-vendor CSI plugin supporting over 80 Drivers to provide block and mount storage to Container Orchestration systems.
     lifecycleModes:
@@ -694,10 +694,10 @@ drivers:
       dynamic: true
       snapshot: true
       raw: true
-      expansion: false
-      clone: false
+      expansion: true
+      clone: true
       topology: false
-      tracking: false
+      tracking: true
   - name: Excelero NVMesh
     link: https://github.com/Excelero/nvmesh-csi-driver
     driverClass: nvmesh-csi.excelero.com
@@ -1785,7 +1785,7 @@ drivers:
       readOnlyMany: true
       readWriteOnce: true
       readWriteMany: true
-      readWriteOncePod: false
+      readWriteOncePod: true
     capabilities:
       dynamic: true
       snapshot: true
@@ -1970,6 +1970,7 @@ drivers:
     link: https://docs.storageos.com/docs/platforms/kubernetes/install/
     driverClass: storageos
     description: CSI Driver for [StorageOS](https://storageos.com/)
+    deprecated: true
     lifecycleModes:
       persistent: true
     accessModes:
@@ -1983,6 +1984,7 @@ drivers:
     link: https://docs.storidge.com/kubernetes_storage/overview.html
     driverClass: csi.cio.storidge.com
     description: CSI Driver for [Storidge CIO](https://storidge.com/)
+    deprecated: true
     lifecycleModes:
       persistent: true
     accessModes:
@@ -1999,7 +2001,7 @@ drivers:
       topology: false
       tracking: false
   - name: StorPool
-    link: https://kb.storpool.com/storpool_integrations/github/kubernetes.html
+    link: https://github.com/storpool/storpool-csi
     driverClass: csi-driver.storpool.com
     description: CSI Driver for [StorPool](https://storpool.com/)
     lifecycleModes:
@@ -2156,7 +2158,7 @@ drivers:
       topology: false
       tracking: false
   - name: XSKY-EBS
-    link: https://xsky-storage.github.io/xsky-csi-driver/csi-block.html
+    link: https://github.com/xsky-storage/xsky-csi-driver
     driverClass: csi.block.xsky.com
     description: CSI Driver for XSKY Distributed Block Storage (X-EBS)
     lifecycleModes:
@@ -2175,9 +2177,9 @@ drivers:
       topology: false
       tracking: false
   - name: XSKY-FS
-    link: https://xsky-storage.github.io/xsky-csi-driver/csi-fs.html
+    link: https://github.com/xsky-storage/xsky-csi-driver
     driverClass: csi.fs.xsky.com
-    description: CSI Driver for XEDP，XEUS，XUDS，XGFS，X3000，X5000
+    description: CSI Driver for XEDP, XEUS, XUDS, XGFS, X3000, X5000
     lifecycleModes:
       persistent: true
     accessModes:
@@ -2203,7 +2205,7 @@ drivers:
     capabilities:
       dynamic: false
   - name: VDA
-    link: https://virtual-disk-array.readthedocs.io/en/latest/Introduction.html
+    link: https://github.com/virtual-disk-array/vda
     driverClass: csi.vda.io
     description: An open source block storage system base on SPDK
     lifecycleModes:
@@ -2314,7 +2316,7 @@ drivers:
     capabilities:
       dynamic: true
   - name: YanRongYun
-    link: https://www.yanrongyun.com/
+    link: https://github.com/zadarastorage/zadara-csi
     driverClass: csi.zadara.com
     description: CSI Driver for Zadara VPSA Storage Array & VPSA All-Flash
     lifecycleModes:
@@ -2333,7 +2335,7 @@ drivers:
       topology: false
       tracking: false
   - name: simplyblock
-    link: https://www.simplyblock.io
+    link: https://github.com/simplyblock-io/spdk-csi
     driverClass: csi.simplyblock.io
     description: "CSI Driver for simplyblock's disaggregated Elastic Block Storage utilizing NVMe over TCP"
     lifecycleModes:
@@ -2352,7 +2354,7 @@ drivers:
       topology: false
       tracking: false
   - name: Harvester
-    link: https://docs.harvesterhci.io/v0.3/rancher/csi-driver/
+    link: https://github.com/harvester/harvester-csi-driver
     driverClass: driver.harvesterhci.io
     description: CSI Driver for Harvester
     lifecycleModes:
@@ -2365,7 +2367,7 @@ drivers:
       expansion: true
       dynamic: true
   - name: DirectPV
-    link: https://min.io/directpv
+    link: https://github.com/minio/directpv
     driverClass: directpv.min.io
     description: CSI Driver which implements a Direct Attached Storage
     lifecycleModes:
@@ -2377,7 +2379,7 @@ drivers:
       expansion: true
       topology: true
   - name: Bare-metal CSI Driver
-    link: https://min.io/directpv
+    link: https://github.com/dell/csi-baremetal
     driverClass: 
     description: CSI Driver which implements a Direct Attached Storage
     lifecycleModes:
