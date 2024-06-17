@@ -73,7 +73,7 @@
     <td>{{ .description | $.Page.RenderString }}</td>
     <td width="150">
         <ul>
-            <li>Persistent: {{ if  (.lifecycleModes.persistent) }}<span style="color: green">✓</span>{{ else }}<span style="color: red">𝘟</span>{{ end }}</li>
+            <li>Persistent: {{ if and (.lifecycleModes) (.lifecycleModes.persistent) }}<span style="color: green">✓</span>{{ else }}<span style="color: red">𝘟</span>{{ end }}</li>
             <li>Ephemeral: {{ if and (.lifecycleModes) (.lifecycleModes.ephemeral) }}<span style="color: green">✓</span>{{ else }}<span style="color: red">𝘟</span>{{ end }}</li>
         </ul>
     </td>
