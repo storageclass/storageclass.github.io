@@ -2376,3 +2376,15 @@ storageClasses:
       dynamic: true
       expansion: true
       topology: true
+  - name: Bare-metal CSI Driver
+    link: https://min.io/directpv
+    driverName: 
+    description: CSI Driver which implements a Direct Attached Storage
+    lifecycleModes:
+      persistent: true
+      ephemeral: true
+    capabilities:
+      raw: true
+      dynamic: true
+      expansion: true
+      topology: true
