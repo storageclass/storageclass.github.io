@@ -10,7 +10,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: false
       readWriteOncePod: true
-    features:
+    capabilities:
       dynamic: true
       snapshot: true
       raw: true
@@ -29,7 +29,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: false
-    features:
+    capabilities:
       dynamic: true
   - name: AlibabaCloud Oss
     link: https://github.com/kubernetes-sigs/alibaba-cloud-csi-driver
@@ -42,7 +42,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: false
-    features:
+    capabilities:
       dynamic: false
       object: true
   - name: Alluxio
@@ -56,7 +56,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: false
-    features:
+    capabilities:
       dynamic: true
       file: true
   - name: ArStor CSI
@@ -71,7 +71,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: true
-    features:
+    capabilities:
       dynamic: true
       snapshot: true
       raw: true
@@ -90,7 +90,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: true
-    features:
+    capabilities:
       dynamic: true
       snapshot: true
       raw: true
@@ -109,7 +109,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: false
-    features:
+    capabilities:
       dynamic: true
       file: true
   - name: AWS FSx for Lustre
@@ -123,7 +123,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: false
-    features:
+    capabilities:
       dynamic: true
   - name: Azure Blob
     link: https://github.com/kubernetes-sigs/blob-csi-driver
@@ -136,7 +136,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: false
-    features:
+    capabilities:
       dynamic: true
       snapshot: false
       raw: false
@@ -156,7 +156,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: true
-    features:
+    capabilities:
       dynamic: true
       snapshot: true
       raw: true
@@ -175,7 +175,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: false
-    features:
+    capabilities:
       dynamic: true
       snapshot: false
       raw: false
@@ -195,7 +195,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: false
-    features:
+    capabilities:
       dynamic: true
   - name: Bigtera VirtualStor (block)
     link: https://github.com/bigtera-ce/ceph-csi
@@ -208,7 +208,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: true
-    features:
+    capabilities:
       dynamic: true
       snapshot: true
       raw: true
@@ -227,7 +227,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: false
-    features:
+    capabilities:
       dynamic: true
       snapshot: false
       raw: false
@@ -247,7 +247,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: true
-    features:
+    capabilities:
       dynamic: true
       snapshot: true
       raw: true
@@ -266,7 +266,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: false
-    features:
+    capabilities:
       dynamic: true
       snapshot: true
       raw: false
@@ -285,7 +285,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: true
-    features:
+    capabilities:
       dynamic: true
       snapshot: true
       raw: true
@@ -304,7 +304,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: true
-    features:
+    capabilities:
       dynamic: true
   - name: cert-manager csi-driver-spiffe
     link: https://cert-manager.io/docs/usage/csi-driver-spiffe/
@@ -317,7 +317,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: true
-    features:
+    capabilities:
       dynamic: true
   - name: Cisco HyperFlex CSI
     link: https://github.com/ciscohyperflex/csi-plugin
@@ -330,7 +330,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: false
-    features:
+    capabilities:
       dynamic: true
       snapshot: false
       raw: true
@@ -349,7 +349,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: false
-    features:
+    capabilities:
       dynamic: true
   - name: Cinder
     link: https://github.com/kubernetes/cloud-provider-openstack/tree/master/pkg/csi/cinder
@@ -359,7 +359,7 @@ storageClasses:
       persistent: true
       ephemeral: true
     accessModes:
-    features:
+    capabilities:
       dynamic: true
       snapshot: true
       raw: true
@@ -378,7 +378,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: true
-    features:
+    capabilities:
       dynamic: true
       snapshot: true
       raw: false
@@ -397,7 +397,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: true
-    features:
+    capabilities:
       dynamic: true
       snapshot: true
       raw: true
@@ -416,7 +416,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: true
-    features:
+    capabilities:
       dynamic: true
       snapshot: true
       raw: true
@@ -435,7 +435,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: false
-    features:
+    capabilities:
       dynamic: true
       snapshot: false
       raw: false
@@ -455,7 +455,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: true
-    features:
+    capabilities:
       dynamic: true
       snapshot: true
       raw: false
@@ -474,7 +474,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: false
-    features:
+    capabilities:
       dynamic: true
       snapshot: false
       raw: false
@@ -494,7 +494,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: true
-    features:
+    capabilities:
       dynamic: true
       snapshot: true
       raw: true
@@ -514,7 +514,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: false
-    features:
+    capabilities:
       dynamic: true
       snapshot: true
       raw: false
@@ -534,7 +534,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: true
-    features:
+    capabilities:
       dynamic: true
       snapshot: true
       raw: true
@@ -554,7 +554,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: true
-    features:
+    capabilities:
       dynamic: true
       snapshot: true
       raw: true
@@ -573,7 +573,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: true
-    features:
+    capabilities:
       dynamic: true
       snapshot: true
       raw: true
@@ -593,7 +593,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: true
-    features:
+    capabilities:
       dynamic: true
       snapshot: true
       raw: true
@@ -613,7 +613,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: false
-    features:
+    capabilities:
       dynamic: true
       snapshot: true
       raw: false
@@ -633,7 +633,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: true
-    features:
+    capabilities:
       dynamic: true
       snapshot: true
       raw: true
@@ -652,7 +652,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: true
-    features:
+    capabilities:
       dynamic: true
       snapshot: true
       raw: true
@@ -671,7 +671,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: true
-    features:
+    capabilities:
       dynamic: true
       snapshot: true
       raw: false
@@ -690,7 +690,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: true
-    features:
+    capabilities:
       dynamic: true
       snapshot: true
       raw: true
@@ -709,7 +709,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: false
-    features:
+    capabilities:
       dynamic: true
       snapshot: false
       raw: true
@@ -728,7 +728,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: true
-    features:
+    capabilities:
       dynamic: true
       snapshot: true
       raw: true
@@ -747,7 +747,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: true
-    features:
+    capabilities:
       dynamic: true
       snapshot: true
       raw: true
@@ -766,7 +766,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: false
-    features:
+    capabilities:
       dynamic: true
       file: true
   - name: Google Cloud Storage FUSE
@@ -781,7 +781,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: false
-    features:
+    capabilities:
       dynamic: false
   - name: Google Cloud Storage
     link: https://github.com/ofek/csi-gcs
@@ -795,7 +795,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: false
-    features:
+    capabilities:
       dynamic: true
       snapshot: false
       raw: false
@@ -814,7 +814,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: false
-    features:
+    capabilities:
       dynamic: true
       snapshot: true
       raw: false
@@ -833,7 +833,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: true
-    features:
+    capabilities:
       dynamic: true
   - name: Hammerspace CSI
     link: https://github.com/hammer-space/csi-plugin
@@ -846,7 +846,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: false
-    features:
+    capabilities:
       dynamic: true
       snapshot: true
       raw: true
@@ -865,7 +865,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: false
-    features:
+    capabilities:
       dynamic: true
       snapshot: true
       raw: true
@@ -884,7 +884,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: true
-    features:
+    capabilities:
       dynamic: true
       snapshot: false
       raw: true
@@ -903,7 +903,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: true
-    features:
+    capabilities:
       dynamic: true
       snapshot: true
       raw: true
@@ -923,7 +923,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: false
-    features:
+    capabilities:
       dynamic: true
       snapshot: true
       raw: true
@@ -942,7 +942,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: false
-    features:
+    capabilities:
       dynamic: false
   - name: HPE Ezmeral (MapR)
     link: https://github.com/mapr/mapr-csi
@@ -955,7 +955,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: false
-    features:
+    capabilities:
       dynamic: true
       snapshot: true
       raw: true
@@ -974,7 +974,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: false
-    features:
+    capabilities:
       dynamic: true
       snapshot: true
       raw: false
@@ -993,7 +993,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: true
-    features:
+    capabilities:
       dynamic: true
       snapshot: false
       raw: true
@@ -1012,7 +1012,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: false
-    features:
+    capabilities:
       dynamic: true
   - name: IBM Block Storage
     link: https://github.com/ibm/ibm-block-csi-driver
@@ -1025,7 +1025,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: true
-    features:
+    capabilities:
       dynamic: true
       snapshot: true
       raw: true
@@ -1044,7 +1044,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: false
-    features:
+    capabilities:
       dynamic: true
       snapshot: true
       raw: false
@@ -1064,7 +1064,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: true
-    features:
+    capabilities:
       dynamic: true
       snapshot: true
       raw: true
@@ -1083,7 +1083,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: false
-    features:
+    capabilities:
       dynamic: true
       snapshot: true
       raw: true
@@ -1102,7 +1102,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: true
-    features:
+    capabilities:
       dynamic: true
       snapshot: true
       raw: true
@@ -1122,7 +1122,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: true
-    features:
+    capabilities:
       dynamic: true
       snapshot: false
       raw: true
@@ -1141,7 +1141,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: false
-    features:
+    capabilities:
       dynamic: true
       snapshot: true
       raw: false
@@ -1160,7 +1160,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: false
-    features:
+    capabilities:
       dynamic: true
       snapshot: true
       raw: false
@@ -1180,7 +1180,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: true
-    features:
+    capabilities:
       dynamic: true
       snapshot: false
       raw: true
@@ -1199,7 +1199,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: true
-    features:
+    capabilities:
       dynamic: true
       snapshot: true
       raw: true
@@ -1218,7 +1218,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: false
-    features:
+    capabilities:
       dynamic: true
       snapshot: false
       raw: false
@@ -1238,7 +1238,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: false
-    features:
+    capabilities:
       dynamic: true
   - name: kaDalu
     link: https://github.com/kadalu/kadalu
@@ -1251,7 +1251,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: false
-    features:
+    capabilities:
       dynamic: true
   - name: KaiXiangTech MegaBric
     link: https://github.com/kaixiangtech/csi-driver-flexblock
@@ -1264,7 +1264,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: false
-    features:
+    capabilities:
       dynamic: true
       snapshot: false
       raw: true
@@ -1283,7 +1283,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: true
-    features:
+    capabilities:
       dynamic: true
       snapshot: true
       raw: true
@@ -1302,7 +1302,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: false
-    features:
+    capabilities:
       dynamic: true
       snapshot: true
       raw: true
@@ -1321,7 +1321,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: true
-    features:
+    capabilities:
       dynamic: true
       snapshot: true
       raw: false
@@ -1341,7 +1341,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: true
-    features:
+    capabilities:
       dynamic: true
   - name: LINSTOR
     link: https://github.com/piraeusdatastore/linstor-csi
@@ -1354,7 +1354,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: true
-    features:
+    capabilities:
       dynamic: true
       snapshot: true
       raw: true
@@ -1373,7 +1373,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: true
-    features:
+    capabilities:
       dynamic: true
       snapshot: false
       raw: true
@@ -1392,7 +1392,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: true
-    features:
+    capabilities:
       dynamic: true
   - name: Manila
     link: https://github.com/kubernetes/cloud-provider-openstack/tree/master/pkg/csi/manila
@@ -1405,7 +1405,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: false
-    features:
+    capabilities:
       dynamic: true
       snapshot: true
       raw: false
@@ -1425,7 +1425,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: false
-    features:
+    capabilities:
       dynamic: true
   - name: NetApp
     link: https://github.com/NetApp/trident
@@ -1438,7 +1438,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: false
-    features:
+    capabilities:
       dynamic: true
       snapshot: true
       raw: true
@@ -1457,7 +1457,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: false
-    features:
+    capabilities:
       dynamic: true
       snapshot: true
       raw: false
@@ -1477,7 +1477,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: false
-    features:
+    capabilities:
       dynamic: true
       snapshot: true
       raw: true
@@ -1496,7 +1496,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: false
-    features:
+    capabilities:
       dynamic: true
   - name: NGX Storage Block Storage
     link: https://github.com/NGXStorage/iscsi-csi-ngxstorage-driver
@@ -1509,7 +1509,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: true
-    features:
+    capabilities:
       dynamic: true
       snapshot: true
       raw: true
@@ -1528,7 +1528,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: false
-    features:
+    capabilities:
       dynamic: true
       snapshot: true
       raw: true
@@ -1547,7 +1547,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: true
-    features:
+    capabilities:
       dynamic: true
       snapshot: true
       raw: true
@@ -1566,7 +1566,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: true
-    features:
+    capabilities:
       dynamic: true
       snapshot: true
       raw: false
@@ -1585,7 +1585,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: true
-    features:
+    capabilities:
       dynamic: true
       snapshot: true
       raw: false
@@ -1604,7 +1604,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: true
-    features:
+    capabilities:
       dynamic: true
       snapshot: true
       raw: true
@@ -1623,7 +1623,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: true
-    features:
+    capabilities:
       dynamic: true
       snapshot: true
       raw: true
@@ -1642,7 +1642,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: false
-    features:
+    capabilities:
       dynamic: true
       file: true
   - name: oVirt
@@ -1656,7 +1656,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: true
-    features:
+    capabilities:
       dynamic: true
       snapshot: false
       raw: true
@@ -1677,7 +1677,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: false
-    features:
+    capabilities:
       dynamic: true
       snapshot: true
       raw: true
@@ -1696,7 +1696,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: true
-    features:
+    capabilities:
       dynamic: true
       snapshot: false
       raw: true
@@ -1715,7 +1715,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: true
-    features:
+    capabilities:
       dynamic: true
       snapshot: true
       raw: true
@@ -1734,7 +1734,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: false
-    features:
+    capabilities:
       dynamic: true
       snapshot: true
       raw: true
@@ -1753,7 +1753,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: false
-    features:
+    capabilities:
       dynamic: true
       object: true
   - name: Quobyte
@@ -1767,7 +1767,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: false
-    features:
+    capabilities:
       dynamic: true
       snapshot: true
       raw: false
@@ -1786,7 +1786,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: false
-    features:
+    capabilities:
       dynamic: true
       snapshot: true
       raw: true
@@ -1805,7 +1805,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: false
-    features:
+    capabilities:
       dynamic: true
       snapshot: true
       raw: true
@@ -1824,7 +1824,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: false
-    features:
+    capabilities:
       dynamic: true
       file: true
   - name: Sangfor-EDS-Block-Storage
@@ -1838,7 +1838,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: true
-    features:
+    capabilities:
       dynamic: true
       block: true
   - name: Scaleway CSI
@@ -1852,7 +1852,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: true
-    features:
+    capabilities:
       dynamic: true
       snapshot: true
       raw: true
@@ -1871,7 +1871,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: true
-    features:
+    capabilities:
       dynamic: true
       snapshot: true
       raw: false
@@ -1890,7 +1890,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: false
-    features:
+    capabilities:
       dynamic: true
   - name: Secrets Store CSI Driver
     link: https://github.com/kubernetes-sigs/secrets-store-csi-driver
@@ -1899,7 +1899,7 @@ storageClasses:
     diskTypes:
       ephemeral: true
     accessModes:
-    features:
+    capabilities:
       dynamic: false
   - name: SmartX
     link: https://www.smartx.com/?locale=en
@@ -1912,7 +1912,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: false
-    features:
+    capabilities:
       dynamic: true
       snapshot: true
       raw: false
@@ -1931,7 +1931,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: false
-    features:
+    capabilities:
       dynamic: true
   - name: SODA
     link: https://github.com/sodafoundation/nbp/tree/master/csi
@@ -1944,7 +1944,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: true
-    features:
+    capabilities:
       dynamic: true
       snapshot: true
       raw: true
@@ -1964,7 +1964,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: true
-    features:
+    capabilities:
       dynamic: true
   - name: StorageOS
     link: https://docs.storageos.com/docs/platforms/kubernetes/install/
@@ -1977,7 +1977,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: false
-    features:
+    capabilities:
       dynamic: true
   - name: Storidge
     link: https://docs.storidge.com/kubernetes_storage/overview.html
@@ -1990,7 +1990,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: false
-    features:
+    capabilities:
       dynamic: true
       snapshot: true
       raw: false
@@ -2010,7 +2010,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: false
-    features:
+    capabilities:
       dynamic: true
       snapshot: false
       raw: false
@@ -2029,7 +2029,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: false
-    features:
+    capabilities:
       dynamic: true
       snapshot: true
       raw: false
@@ -2048,7 +2048,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: true
-    features:
+    capabilities:
       dynamic: true
       snapshot: true
       raw: false
@@ -2067,7 +2067,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: false
-    features:
+    capabilities:
       dynamic: true
       file: true
   - name: Tencent Cloud Object Storage
@@ -2081,7 +2081,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: false
-    features:
+    capabilities:
       dynamic: false
       object: true
   - name: TopoLVM
@@ -2095,7 +2095,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: true
-    features:
+    capabilities:
       dynamic: true
       snapshot: true
       raw: true
@@ -2114,7 +2114,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: false
-    features:
+    capabilities:
       dynamic: true
   - name: TrueNAS
     link: https://github.com/hpe-storage/truenas-csp
@@ -2127,7 +2127,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: false
-    features:
+    capabilities:
       dynamic: true
       snapshot: true
       raw: true
@@ -2147,7 +2147,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: false
-    features:
+    capabilities:
       dynamic: true
       snapshot: true
       raw: false
@@ -2166,7 +2166,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: true
-    features:
+    capabilities:
       dynamic: true
       snapshot: true
       raw: true
@@ -2185,7 +2185,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: false
-    features:
+    capabilities:
       dynamic: true
       snapshot: true
       raw: false
@@ -2200,7 +2200,7 @@ storageClasses:
     diskTypes:
       ephemeral: true
     accessModes:
-    features:
+    capabilities:
       dynamic: false
   - name: VDA
     link: https://virtual-disk-array.readthedocs.io/en/latest/Introduction.html
@@ -2213,7 +2213,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: true
-    features:
+    capabilities:
       dynamic: false
   - name: Veritas InfoScale Volumes
     link: https://www.veritas.com/solution/virtualization/containers.html
@@ -2226,7 +2226,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: false
-    features:
+    capabilities:
       dynamic: true
       snapshot: true
       raw: false
@@ -2245,7 +2245,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: false
-    features:
+    capabilities:
       dynamic: true
       snapshot: true
       raw: false
@@ -2265,7 +2265,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: true
-    features:
+    capabilities:
       dynamic: true
       snapshot: true
       raw: true
@@ -2284,7 +2284,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: true
-    features:
+    capabilities:
       dynamic: true
   - name: WekaIO
     link: https://github.com/weka/csi-wekafs
@@ -2297,7 +2297,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: false
-    features:
+    capabilities:
       dynamic: true
       file: true
   - name: Yandex.Cloud
@@ -2311,7 +2311,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: true
-    features:
+    capabilities:
       dynamic: true
   - name: YanRongYun
     link: https://www.yanrongyun.com/
@@ -2324,7 +2324,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: false
-    features:
+    capabilities:
       dynamic: true
       snapshot: true
       raw: true
@@ -2343,7 +2343,7 @@ storageClasses:
       readWriteOnce: true
       readWriteMany: true
       readWriteOncePod: true
-    features:
+    capabilities:
       dynamic: true
       snapshot: true
       raw: true
@@ -2359,7 +2359,7 @@ storageClasses:
       persistent: true
     accessModes:
       readWriteOnce: true
-    features:
+    capabilities:
       snapshot: false
       tracking: false
       expansion: true

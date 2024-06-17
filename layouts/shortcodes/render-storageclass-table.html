@@ -19,9 +19,9 @@
             </select>
         </div>
         <div>
-            <label>Features:</label>
-            <select id="features" name="features"
-                    style="width: 200px" placeholder="Features"
+            <label>Capabilities:</label>
+            <select id="capabilities" name="capabilities"
+                    style="width: 200px" placeholder="Capabilities"
                     multiple multiselect-search="false"
                     multiselect-select-all="false"
                     multiselect-hide-x="true"
@@ -61,7 +61,7 @@
         <td>Driver Name</td>
         <td>Description</td>
         <td>Disk Type</td>
-        <td>Supported Features</td>
+        <td>Supported Capabilities</td>
         <td>Access Modes</td>
     </tr>
 </thead>
@@ -79,15 +79,15 @@
     </td>
     <td width="180">
         <ul>
-            <li>Block Storage: {{ if and (.features) (.features.raw) }}<span style="color: green">✓</span>{{ else }}<span style="color: red">𝘟</span>{{ end }}</li>
-            <li>File Storage: {{ if and (.features) (.features.file) }}<span style="color: green">✓</span>{{ else }}<span style="color: red">𝘟</span>{{ end }}</li>
-            <li>Object Storage: {{ if and (.features) (.features.object) }}<span style="color: green">✓</span>{{ else }}<span style="color: red">𝘟</span>{{ end }}</li>
-            <li>Dynamic: {{ if and (.features) (.features.dynamic) }}<span style="color: green">✓</span>{{ else }}<span style="color: red">𝘟</span>{{ end }}</li>
-            <li>Snapshot: {{ if and (.features) (.features.snapshot) }}<span style="color: green">✓</span>{{ else }}<span style="color: red">𝘟</span>{{ end }}</li>
-            <li>Clones: {{ if and (.features) (.features.clone) }}<span style="color: green">✓</span>{{ else }}<span style="color: red">𝘟</span>{{ end }}</li>
-            <li>Expansion: {{ if and (.features) (.features.expansion) }}<span style="color: green">✓</span>{{ else }}<span style="color: red">𝘟</span>{{ end }}</li>
-            <li>Topology: {{ if and (.features) (.features.topology) }}<span style="color: green">✓</span>{{ else }}<span style="color: red">𝘟</span>{{ end }}</li>
-            <li>Tracking: {{ if and (.features) (.features.tracking) }}<span style="color: green">✓</span>{{ else }}<span style="color: red">𝘟</span>{{ end }}</li>
+            <li>Block Storage: {{ if and (.capabilities) (.capabilities.raw) }}<span style="color: green">✓</span>{{ else }}<span style="color: red">𝘟</span>{{ end }}</li>
+            <li>File Storage: {{ if and (.capabilities) (.capabilities.file) }}<span style="color: green">✓</span>{{ else }}<span style="color: red">𝘟</span>{{ end }}</li>
+            <li>Object Storage: {{ if and (.capabilities) (.capabilities.object) }}<span style="color: green">✓</span>{{ else }}<span style="color: red">𝘟</span>{{ end }}</li>
+            <li>Dynamic: {{ if and (.capabilities) (.capabilities.dynamic) }}<span style="color: green">✓</span>{{ else }}<span style="color: red">𝘟</span>{{ end }}</li>
+            <li>Snapshot: {{ if and (.capabilities) (.capabilities.snapshot) }}<span style="color: green">✓</span>{{ else }}<span style="color: red">𝘟</span>{{ end }}</li>
+            <li>Clones: {{ if and (.capabilities) (.capabilities.clone) }}<span style="color: green">✓</span>{{ else }}<span style="color: red">𝘟</span>{{ end }}</li>
+            <li>Expansion: {{ if and (.capabilities) (.capabilities.expansion) }}<span style="color: green">✓</span>{{ else }}<span style="color: red">𝘟</span>{{ end }}</li>
+            <li>Topology: {{ if and (.capabilities) (.capabilities.topology) }}<span style="color: green">✓</span>{{ else }}<span style="color: red">𝘟</span>{{ end }}</li>
+            <li>Tracking: {{ if and (.capabilities) (.capabilities.tracking) }}<span style="color: green">✓</span>{{ else }}<span style="color: red">𝘟</span>{{ end }}</li>
         </ul>
     </td>
     <td width="220">
@@ -108,16 +108,16 @@
 
     const searchTerm = document.getElementById("searchTerm");
     const diskTypes = document.getElementById("diskTypes");
-    const features = document.getElementById("features");
+    const capabilities = document.getElementById("capabilities");
     const accessModes = document.getElementById("accessModes");
 
     const filterStoragesClasses = () => {
         const term = searchTerm.value.toLowerCase();
         const selectedDiskTypes = Array.from(diskTypes.selectedOptions).map(option => option.value);
-        const selectedFeatures = Array.from(features.selectedOptions).map(option => option.value);
+        const selectedCapabilities = Array.from(capabilities.selectedOptions).map(option => option.value);
         const selectedAccessModes = Array.from(accessModes.selectedOptions).map(option => option.value);
 
-        if (term.length === 0 && diskTypes.length === 0 && selectedFeatures.length === 0 && accessModes.length === 0) {
+        if (term.length === 0 && diskTypes.length === 0 && selectedCapabilities.length === 0 && accessModes.length === 0) {
             storageClasses.forEach(storageClass => {
                 const row = document.getElementById(storageClass.name);
                 row.removeAttribute("style");
@@ -143,10 +143,10 @@
             );
         }
 
-        if (selectedFeatures.length > 0) {
+        if (selectedCapabilities.length > 0) {
             filteredStorageClasses = filteredStorageClasses.filter(storageClass =>
-                selectedFeatures.find(feature => 
-                    storageClass.features && !storageClass.features[feature]
+            selectedCapabilities.find(feature => 
+                    storageClass.capabilities && !storageClass.capabilities[feature]
                 ) === undefined
             );
         }
@@ -179,7 +179,7 @@
     diskTypes.onchange = function() {
         return filterStoragesClasses();
     }
-    features.onchange = function() {
+    capabilities.onchange = function() {
         return filterStoragesClasses();
     }
     accessModes.onchange = function() {
