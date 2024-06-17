@@ -2483,3 +2483,11 @@ drivers:
       dynamic: true
       expansion: true
       topology: true
+  - name: SSHFS CSI Driver
+    deprecated: true
+    driverClass: csi-baremetal.dell.com
+    description: CSI Driver which attaches a SSHFS mount
+    lifecycleModes:
+      persistent: true
+    capabilities:
+      file: true
