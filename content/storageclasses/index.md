@@ -11,6 +11,6 @@ categories:
   - storageclass
 ---
 
-The following table contains a list of available Kubernetes StorageClass implementations. All storage classes are listed with their respective features.  The list may not be complete and properties may be incorrect or incomplete. The owners of the storage classes are responsible for validating and updating those properties.
+The following table contains a list of available Kubernetes container storage interface (CSI) implementations. All storage classes are listed with their respective capabilities. The list is updated bit by bit according to the documentation on a best effort basis. The list may not be complete and properties may be incorrect or incomplete. Vendors of the CSI drivers are welcome to validate and update their respective properties.
 
 {{< render-storageclass-table >}}
