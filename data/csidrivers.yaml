@@ -1,6 +1,7 @@
 drivers:
   - name: AlibabaCloud Disk
     link: https://github.com/kubernetes-sigs/alibaba-cloud-csi-driver
+    docsLink: https://github.com/kubernetes-sigs/alibaba-cloud-csi-driver/blob/master/docs/disk.md
     driverClass: diskplugin.csi.alibabacloud.com	
     description: CSI Driver for an AlibabaCloud Disk
     lifecycleModes:
@@ -20,6 +21,7 @@ drivers:
       tracking: false
   - name: AlibabaCloud Nas
     link: https://github.com/kubernetes-sigs/alibaba-cloud-csi-driver
+    docsLink: https://github.com/kubernetes-sigs/alibaba-cloud-csi-driver/blob/master/docs/nas.md
     driverClass: nasplugin.csi.alibabacloud.com
     description: CSI Driver for AlibabaCloud Network Attached Storage (NAS)
     lifecycleModes:
@@ -33,6 +35,7 @@ drivers:
       dynamic: true
   - name: AlibabaCloud Oss
     link: https://github.com/kubernetes-sigs/alibaba-cloud-csi-driver
+    docsLink: https://github.com/kubernetes-sigs/alibaba-cloud-csi-driver/blob/master/docs/oss.md
     driverClass: ossplugin.csi.alibabacloud.com
     description: CSI Driver for AlibabaCloud Object Storage Service (OSS)
     lifecycleModes:
@@ -47,6 +50,7 @@ drivers:
       object: true
   - name: Alluxio
     link: https://github.com/Alluxio/alluxio/tree/master/integration/docker/csi
+    docsLink: https://docs.alluxio.io/os/user/stable/en/kubernetes/Running-Alluxio-On-Kubernetes.html#csi
     driverClass: csi.alluxio.com
     description: CSI Driver for Alluxio File System)
     lifecycleModes:
@@ -81,6 +85,7 @@ drivers:
       tracking: false
   - name: AWS Elastic Block Storage
     link: https://github.com/kubernetes-sigs/aws-ebs-csi-driver
+    docsLink: https://github.com/kubernetes-sigs/aws-ebs-csi-driver/tree/master/docs
     driverClass: ebs.csi.aws.com
     description: CSI Driver for AWS Elastic Block Storage (EBS)
     lifecycleModes:
@@ -100,6 +105,7 @@ drivers:
       tracking: false
   - name: AWS Elastic File System
     link: https://github.com/aws/aws-efs-csi-driver
+    docsLink: https://github.com/kubernetes-sigs/aws-efs-csi-driver/tree/master/docs
     driverClass: efs.csi.aws.com
     description: CSI Driver for AWS Elastic File System (EFS)
     lifecycleModes:
@@ -114,6 +120,7 @@ drivers:
       file: true
   - name: AWS FSx for Lustre
     link: https://github.com/aws/aws-fsx-csi-driver
+    docsLink: https://github.com/kubernetes-sigs/aws-fsx-csi-driver/tree/master/docs
     driverClass: fsx.csi.aws.com
     description: CSI Driver for AWS FSx for Lustre (EBS)
     lifecycleModes:
@@ -127,6 +134,7 @@ drivers:
       dynamic: true
   - name: Azure Blob
     link: https://github.com/kubernetes-sigs/blob-csi-driver
+    docsLink: https://github.com/kubernetes-sigs/blob-csi-driver/tree/master/docs
     driverClass: blob.csi.azure.com
     description: CSI Driver for Azure Blob storage
     lifecycleModes:
@@ -147,6 +155,7 @@ drivers:
       object: true
   - name: Azure Disk
     link: https://github.com/kubernetes-sigs/azuredisk-csi-driver
+    docsLink: https://github.com/kubernetes-sigs/azuredisk-csi-driver/tree/master/docs
     driverClass: disk.csi.azure.com
     description: CSI Driver for Azure Disk
     lifecycleModes:
@@ -166,6 +175,7 @@ drivers:
       tracking: false
   - name: Azure File
     link: https://github.com/kubernetes-sigs/azurefile-csi-driver
+    docsLink: https://github.com/kubernetes-sigs/azurefile-csi-driver/tree/master/docs
     driverClass: file.csi.azure.com
     description: CSI Driver for Azure File
     lifecycleModes:
@@ -186,6 +196,7 @@ drivers:
       file: true
   - name: BeeGFS
     link: https://github.com/NetApp/beegfs-csi-driver
+    docsLink: https://github.com/ThinkParQ/beegfs-csi-driver/blob/master/docs/usage.md
     driverClass: beegfs.csi.netapp.com
     description: CSI Driver for the [BeeGFS](https://www.beegfs.io/) Parallel File System
     lifecycleModes:
@@ -199,6 +210,7 @@ drivers:
       dynamic: true
   - name: Bigtera VirtualStor (block)
     link: https://github.com/bigtera-ce/ceph-csi
+    docsLink: https://github.com/bigtera-ce/ceph-csi/tree/bigtera-csi/docs
     driverClass: csi.block.bigtera.com
     description: CSI Driver for Bigtera VirtualStor block storage
     lifecycleModes:
@@ -218,6 +230,7 @@ drivers:
       tracking: false
   - name: Bigtera VirtualStor (filesystem)
     link: https://github.com/bigtera-ce/ceph-csi
+    docsLink: https://github.com/bigtera-ce/ceph-csi/tree/bigtera-csi/docs
     driverClass: csi.fs.bigtera.com
     description: CSI Driver for for Bigtera VirtualStor filesystem
     lifecycleModes:
@@ -238,6 +251,7 @@ drivers:
       file: true
   - name: BizFlyCloud Block Storage
     link: https://github.com/bizflycloud/csi-bizflycloud
+    docsLink: https://github.com/bizflycloud/csi-bizflycloud/tree/master/docs
     driverClass: volume.csi.bizflycloud.vn
     description: CSI Driver for BizFly Cloud block storage
     lifecycleModes:
@@ -257,6 +271,7 @@ drivers:
       tracking: false
   - name: CephFS
     link: https://github.com/ceph/ceph-csi
+    docsLink: https://github.com/ceph/ceph-csi/tree/devel/docs
     driverClass: cephfs.csi.ceph.com
     description: CSI Driver for CephFS
     lifecycleModes:
@@ -276,6 +291,7 @@ drivers:
       tracking: false
   - name: Ceph RBD
     link: https://github.com/ceph/ceph-csi
+    docsLink: https://github.com/ceph/ceph-csi/tree/devel/docs
     driverClass: rbd.csi.ceph.com
     description: CSI Driver for Ceph RBD
     lifecycleModes:
@@ -294,7 +310,8 @@ drivers:
       topology: true
       tracking: false
   - name: cert-manager csi-driver
-    link: https://cert-manager.io/docs/usage/csi-driver/
+    link: https://github.com/cert-manager/csi-driver
+    docsLink: https://cert-manager.io/docs/usage/csi-driver/
     driverClass: csi.cert-manager.io
     description: Uses [cert-manager](https://cert-manager.io) to provision secretless X.509 certificates for pods via ephemeral CSI volumes
     lifecycleModes:
@@ -307,7 +324,8 @@ drivers:
     capabilities:
       dynamic: true
   - name: cert-manager csi-driver-spiffe
-    link: https://cert-manager.io/docs/usage/csi-driver-spiffe/
+    link: https://github.com/cert-manager/csi-driver-spiffe
+    docsLink: https://cert-manager.io/docs/usage/csi-driver-spiffe/
     driverClass: spiffe.csi.cert-manager.io
     description: Uses [cert-manager](https://cert-manager.io) to provision X.509 [SPIFFE SVIDs](https://spiffe.io/docs/latest/spiffe-about/spiffe-concepts/#spiffe-verifiable-identity-document-svid) for pods via ephemeral CSI volumes
     lifecycleModes:
@@ -321,6 +339,7 @@ drivers:
       dynamic: true
   - name: Cisco HyperFlex CSI
     link: https://github.com/ciscohyperflex/csi-plugin
+    deprecated: true
     driverClass: HX-CSI
     description: CSI Driver for Cisco HyperFlex
     lifecycleModes:
@@ -353,6 +372,7 @@ drivers:
       dynamic: true
   - name: Cinder
     link: https://github.com/kubernetes/cloud-provider-openstack/tree/master/pkg/csi/cinder
+    docsLink: https://github.com/kubernetes/cloud-provider-openstack/tree/master/docs/cinder-csi-plugin
     driverClass: cinder.csi.openstack.org
     description: CSI Driver for OpenStack Cinder
     lifecycleModes:
@@ -407,6 +427,7 @@ drivers:
       tracking: false
   - name: Datatom-InfinityCSI
     link: https://github.com/datatom-infinity/infinity-csi
+    deprecated: true
     driverClass: csi-infiblock-plugin
     description: CDI Driver for DATATOM Infinity storage
     lifecycleModes:
@@ -426,6 +447,7 @@ drivers:
       tracking: false
   - name: Datatom-InfinityCSI (filesystem)
     link: https://github.com/datatom-infinity/infinity-csi
+    deprecated: true
     driverClass: csi-infifs-plugin
     description: CDI Driver for DATATOM Infinity filesystem storage
     lifecycleModes:
@@ -446,6 +468,7 @@ drivers:
       file: true
   - name: Datera
     link: https://github.com/Datera/datera-csi
+    deprecated: true
     driverClass: dsp.csi.daterainc.io
     description: CSI Driver for Datera Data Services Platform (DSP)
     lifecycleModes:
@@ -485,6 +508,7 @@ drivers:
       file: true
   - name: Dell EMC PowerMax
     link: https://github.com/dell/csi-powermax
+    docsLink: https://dell.github.io/csm-docs/docs/csidriver/
     driverClass: csi-powermax.dellemc.com
     description: CSI Driver for [Dell EMC PowerMax](https://www.delltechnologies.com/en-us/storage/powermax.htm)
     lifecycleModes:
@@ -504,6 +528,7 @@ drivers:
       tracking: false
   - name: Dell EMC PowerScale
     link: https://github.com/dell/csi-powerscale
+    docsLink: https://dell.github.io/csm-docs/docs/csidriver/
     driverClass: csi-isilon.dellemc.com
     description: CSI Driver for [Dell EMC PowerScale](https://www.delltechnologies.com/en-us/storage/powerscale.htm)
     lifecycleModes:
@@ -524,6 +549,7 @@ drivers:
       tracking: false
   - name: Dell EMC PowerStore
     link: https://github.com/dell/csi-powerstore
+    docsLink: https://dell.github.io/csm-docs/docs/csidriver/
     driverClass: csi-powerstore.dellemc.com
     description: CSI Driver for [Dell EMC PowerStore](https://www.delltechnologies.com/en-us/storage/powerstore-storage-appliance.htm)
     lifecycleModes:
@@ -544,6 +570,7 @@ drivers:
       tracking: false
   - name: Dell EMC Unity
     link: https://github.com/dell/csi-unity
+    docsLink: https://dell.github.io/csm-docs/docs/csidriver/
     driverClass: csi-unity.dellemc.com
     description: CSI Driver for [Dell EMC Unity](https://www.delltechnologies.com/en-us/storage/unity.htm)
     lifecycleModes:
@@ -562,10 +589,11 @@ drivers:
       clone: true
       topology: true
       tracking: false
-  - name: Dell EMC VxFlexOS
-    link: https://github.com/dell/csi-vxflexos
+  - name: Dell EMC VxFlexOS (Dell PowerFlex)
+    link: https://github.com/dell/csi-powerflex
+    docsLink: https://dell.github.io/csm-docs/docs/csidriver/
     driverClass: csi-vxflexos.dellemc.com
-    description: CSI Driver for [Dell EMC VxFlexOS](https://www.delltechnologies.com/en-us/hyperconverged-infrastructure/vxflex.htm)
+    description: CSI Driver for [Dell PowerFlex](https://www.dell.com/en-us/shop/powerflex/sf/powerflex)
     lifecycleModes:
       persistent: true
     accessModes:
@@ -623,7 +651,7 @@ drivers:
       topology: false
       tracking: false
   - name: Diamanti-CSI
-    link: https://diamanti.com/use-cases/io-acceleration/#csi
+    link: https://diamanti.com/products/ultima-enterprise/
     driverClass: dcx.csi.diamanti.com
     description: CSI Driver for Diamanti DCX Platform
     lifecycleModes:
@@ -662,6 +690,7 @@ drivers:
       tracking: false
   - name: Dothill-CSI
     link: https://github.com/enix/dothill-csi
+    deprecated: true
     driverClass: dothill.csi.enix.io
     description: Generic CSI plugin supporting [Seagate AssuredSan](https://www.seagate.com/fr/fr/support/dothill-san/assuredsan-pro-5000-series/) appliances such as [HPE MSA](https://www.hpe.com/us/en/storage/flash-hybrid.html), [Dell EMC PowerVault ME4](https://www.dell.com/fr-fr/work/shop/productdetailstxn/powervault-me4-series) and others ...
     lifecycleModes:
@@ -681,6 +710,7 @@ drivers:
       tracking: false
   - name: Ember CSI
     link: https://github.com/embercsi/ember-csi
+    docsLink: https://docs.ember-csi.io/en/latest/
     driverClass: '[x].ember-csi.io'
     description: Multi-vendor CSI plugin supporting over 80 Drivers to provide block and mount storage to Container Orchestration systems.
     lifecycleModes:
@@ -700,6 +730,7 @@ drivers:
       tracking: true
   - name: Excelero NVMesh
     link: https://github.com/Excelero/nvmesh-csi-driver
+    docsLink: https://www.excelero.com/nvmesh-csi-driver-guide/
     driverClass: nvmesh-csi.excelero.com
     description: CSI Driver for Excelero NVMesh
     lifecycleModes:
@@ -738,6 +769,7 @@ drivers:
       tracking: false
   - name: GCE Persistent Disk
     link: https://github.com/kubernetes-sigs/gcp-compute-persistent-disk-csi-driver
+    docsLink: https://cloud.google.com/kubernetes-engine/docs/how-to/persistent-volumes/gce-pd-csi-driver
     driverClass: pd.csi.storage.gke.io
     description: CSI Driver for Google Compute Engine Persistent Disk (GCE PD)
     lifecycleModes:
@@ -757,6 +789,7 @@ drivers:
       tracking: false
   - name: Google Cloud Filestore
     link: https://github.com/kubernetes-sigs/gcp-filestore-csi-driver
+    docsLink: https://github.com/kubernetes-sigs/gcp-filestore-csi-driver/blob/master/docs/kubernetes/pre-provisioned-pv.md
     driverClass: filestore.csi.storage.gke.io
     description: CSI Driver for Google Cloud Filestore
     lifecycleModes:
@@ -771,6 +804,7 @@ drivers:
       file: true
   - name: Google Cloud Storage FUSE
     link: https://github.com/GoogleCloudPlatform/gcs-fuse-csi-driver
+    docsLink: https://cloud.google.com/kubernetes-engine/docs/how-to/persistent-volumes/cloud-storage-fuse-csi-driver
     driverClass: gcsfuse.csi.storage.gke.io
     description: CSI Driver for [Google Cloud Storage FUSE](https://cloud.google.com/storage/docs/gcs-fuse)
     lifecycleModes:
@@ -785,6 +819,7 @@ drivers:
       dynamic: false
   - name: Google Cloud Storage
     link: https://github.com/ofek/csi-gcs
+    docsLink: https://ofek.dev/csi-gcs/
     driverClass: gcs.csi.ofek.dev
     description: CSI Driver for Google Cloud Storage
     lifecycleModes:
@@ -835,7 +870,7 @@ drivers:
       readWriteOncePod: true
     capabilities:
       dynamic: true
-  - name: Hammerspace CSI
+  - name: Hammerspace CSI (Block)
     link: https://github.com/hammer-space/csi-plugin
     driverClass: com.hammerspace.csi
     description: CSI Driver for Hammerspace Storage
@@ -850,10 +885,29 @@ drivers:
       dynamic: true
       snapshot: true
       raw: true
-      expansion: false
+      expansion: true
       clone: false
       topology: false
-      tracking: false
+      tracking: true
+  - name: Hammerspace CSI (File)
+    link: https://github.com/hammer-space/csi-plugin
+    driverClass: com.hammerspace.csi
+    description: CSI Driver for Hammerspace Storage
+    lifecycleModes:
+      persistent: true
+    accessModes:
+      readOnlyMany: true
+      readWriteOnce: true
+      readWriteMany: true
+      readWriteOncePod: false
+    capabilities:
+      dynamic: true
+      snapshot: true
+      file: true
+      expansion: true
+      clone: false
+      topology: false
+      tracking: true
   - name: Hedvig
     link: https://documentation.commvault.com/commvault/hedvig/others/pdf/Hedvig_CSI_User_Guide.pdf
     driverClass: io.hedvig.csi
@@ -913,6 +967,7 @@ drivers:
       tracking: false
   - name: HPE
     link: https://github.com/hpe-storage/csi-driver
+    docsLink: https://scod.hpedev.io/csi_driver/deployment.html
     driverClass: csi.hpe.com
     description: CSI Driver for HPE storage servers, [multi-platform](https://scod.hpedev.io/csi_driver). Supports [HPE Alletra](https://hpe.com/storage/alletra), [Nimble Storage](https://hpe.com/storage/nimble), [Primera](https://hpe.com/storage/primera) and [3PAR](https://hpe.com/storage/3par)
     lifecycleModes:
@@ -946,6 +1001,7 @@ drivers:
       dynamic: false
   - name: HPE Ezmeral (MapR)
     link: https://github.com/mapr/mapr-csi
+    docsLink: https://docs.ezmeral.hpe.com/datafabric-customer-managed/77/CSIdriver/csi_overview.html
     driverClass: com.mapr.csi-kdf
     description: CSI Driver for HPE Ezmeral Data Fabric
     lifecycleModes:
@@ -965,6 +1021,7 @@ drivers:
       tracking: false
   - name: Huawei Storage CSI
     link: https://github.com/Huawei/eSDK_K8S_Plugin
+    docsLink: https://github.com/Huawei/eSDK_K8S_Plugin/tree/master/docs
     driverClass: csi.huawei.com
     description: CSI Driver for FusionStorage, OceanStor 100D, OceanStor Pacific, OceanStor Dorado V3, OceanStor Dorado V6, OceanStor V3, OceanStor V5
     lifecycleModes:
@@ -984,6 +1041,7 @@ drivers:
       tracking: false
   - name: HwameiStor
     link: https://github.com/hwameistor/hwameistor
+    docsLink: https://hwameistor.io/docs/intro
     driverClass: lvm.hwameistor.io disk.hwameistor.io
     description: CSI Driver for Local Storage
     lifecycleModes:
@@ -1016,8 +1074,9 @@ drivers:
       dynamic: true
   - name: IBM Block Storage
     link: https://github.com/ibm/ibm-block-csi-driver
+    docsLink: https://www.ibm.com/docs/en/stg-block-csi-driver
     driverClass: block.csi.ibm.com
-    description: CSI [Driver](https://www.ibm.com/docs/en/stg-block-csi-driver) for IBM Spectrum Virtualize Family, IBM FlashSystem A9000 and A9000R, IBM DS8000 Family 8.x and higher.
+    description: CSI Driver for IBM Spectrum Virtualize Family, IBM FlashSystem A9000 and A9000R, IBM DS8000 Family 8.x and higher.
     lifecycleModes:
       persistent: true
     accessModes:
@@ -1035,8 +1094,9 @@ drivers:
       tracking: false
   - name: IBM Storage Scale
     link: https://github.com/IBM/ibm-spectrum-scale-csi
+    docsLink: https://www.ibm.com/docs/en/spectrum-scale-csi
     driverClass: spectrumscale.csi.ibm.com
-    description: CSI [Driver](https://www.ibm.com/docs/en/spectrum-scale-csi) for the IBM Storage Scale File System
+    description: CSI Driver for the IBM Storage Scale File System
     lifecycleModes:
       persistent: true
     accessModes:
@@ -1055,8 +1115,9 @@ drivers:
       file: true
   - name: IBM Cloud Block Storage VPC CSI Driver
     link: https://github.com/kubernetes-sigs/ibm-vpc-block-csi-driver
+    docsLink: https://cloud.ibm.com/docs/containers?topic=containers-vpc-block
     driverClass: vpc.block.csi.ibm.io
-    description: CSI [Driver](https://cloud.ibm.com/docs/containers?topic=containers-vpc-block) for IBM Cloud Kubernetes Service and Red Hat OpenShift on IBM Cloud
+    description: CSI Driver for IBM Cloud Kubernetes Service and Red Hat OpenShift on IBM Cloud
     lifecycleModes:
       persistent: true
     accessModes:
@@ -1074,6 +1135,7 @@ drivers:
       tracking: false
   - name: Infinidat
     link: https://github.com/Infinidat/infinibox-csi-driver
+    docsLink: https://support.infinidat.com/hc/en-us/articles/10106070174749
     driverClass: infinibox-csi-driver
     description: CSI Driver for Infinidat [InfiniBox](https://infinidat.com/en/products-technology/infinibox)
     lifecycleModes:
@@ -1112,6 +1174,7 @@ drivers:
       tracking: false
   - name: Intel PMEM-CSI
     link: https://github.com/intel/pmem-csi
+    docsLink: https://github.com/intel/pmem-csi/tree/devel/docs
     driverClass: pmem-csi.intel.com
     description: CSI Driver for [PMEM](https://pmem.io/) from Intel
     lifecycleModes:
@@ -1229,6 +1292,7 @@ drivers:
       tracking: false
   - name: JuiceFS
     link: https://github.com/juicedata/juicefs-csi-driver
+    docsLink: https://juicefs.com/docs/csi/introduction/
     driverClass: csi.juicefs.com
     description: CSI Driver for JuiceFS File System
     lifecycleModes:
@@ -1242,6 +1306,7 @@ drivers:
       dynamic: true
   - name: kaDalu
     link: https://github.com/kadalu/kadalu
+    docsLink: https://docs.kadalu.tech/k8s-storage/devel/quick-start/
     driverClass: org.kadalu.gluster
     description: CSI Driver (and operator) for GlusterFS
     lifecycleModes:
@@ -1255,6 +1320,7 @@ drivers:
       dynamic: true
   - name: KaiXiangTech MegaBric
     link: https://github.com/kaixiangtech/csi-driver-flexblock
+    deprecated: true
     driverClass: flexblock.csi.kaixiangtech.com
     description: CSI Driver for KaiXiangTech MegaBric Storage
     lifecycleModes:
@@ -1274,6 +1340,7 @@ drivers:
       tracking: false
   - name: KumoScale Block Storage
     link: https://github.com/KioxiaAmerica/kumoscale-csi
+    deprecated: true
     driverClass: kumoscale.kioxia.com
     description: CSI Driver for KumoScale Block Storage
     lifecycleModes:
@@ -1293,6 +1360,7 @@ drivers:
       tracking: false
   - name: Lightbits Labs Block
     link: https://github.com/LightBitsLabs/los-csi
+    docsLink: https://github.com/LightBitsLabs/los-csi/blob/master/docs/src/SUMMARY.md
     driverClass: csi.lightbitslabs.com
     description: CSI Driver for Lightbits Storage
     lifecycleModes:
@@ -1312,6 +1380,7 @@ drivers:
       tracking: false
   - name: Lightbits Labs File
     link: https://github.com/LightBitsLabs/los-csi
+    docsLink: https://github.com/LightBitsLabs/los-csi/blob/master/docs/src/SUMMARY.md
     driverClass: csi.lightbitslabs.com
     description: CSI Driver for Lightbits Storage
     lifecycleModes:
@@ -1364,6 +1433,7 @@ drivers:
       tracking: false
   - name: Longhorn
     link: https://github.com/longhorn/longhorn
+    docsLink: https://longhorn.io/docs/1.6.2/deploy/install/#installation-requirements
     driverClass: driver.longhorn.io
     description: CSI Driver for [Longhorn](https://longhorn.io/) volumes
     lifecycleModes:
@@ -1396,6 +1466,7 @@ drivers:
       dynamic: true
   - name: Manila
     link: https://github.com/kubernetes/cloud-provider-openstack/tree/master/pkg/csi/manila
+    docsLink: https://github.com/kubernetes/cloud-provider-openstack/blob/master/docs/manila-csi-plugin/using-manila-csi-plugin.md
     driverClass: manila.csi.openstack.org
     description: CSI Driver for OpenStack Shared File System Service (Manila)
     lifecycleModes:
@@ -1429,6 +1500,7 @@ drivers:
       dynamic: true
   - name: NetApp
     link: https://github.com/NetApp/trident
+    docsLink: https://docs.netapp.com/us-en/trident/index.html
     driverClass: csi.trident.netapp.io
     description: CSI Driver for NetApp's [Trident](https://docs.netapp.com/us-en/trident/index.html) container storage orchestrator
     lifecycleModes:
@@ -1460,7 +1532,6 @@ drivers:
     capabilities:
       dynamic: true
       snapshot: true
-      raw: false
       file: true
       expansion: true
       clone: true
@@ -1519,6 +1590,7 @@ drivers:
       tracking: false
   - name: Nutanix Volumes
     link: https://github.com/nutanix/csi-plugin
+    deprecated: true
     driverClass: csi.nutanix.com
     description: CSI Driver for Nutanix
     lifecycleModes:
@@ -1538,6 +1610,7 @@ drivers:
       tracking: false
   - name: Nutanix Files
     link: https://github.com/nutanix/csi-plugin
+    deprecated: true
     driverClass: csi.nutanix.com
     description: CSI Driver for Nutanix
     lifecycleModes:
@@ -1557,6 +1630,7 @@ drivers:
       tracking: false
   - name: OpenEBS
     link: https://github.com/openebs/csi
+    docsLink: https://openebs.io/docs
     driverClass: cstor.csi.openebs.io
     description: CSI Driver for  [OpenEBS](https://www.openebs.io/)
     lifecycleModes:
@@ -1595,6 +1669,7 @@ drivers:
       tracking: false
   - name: Open-Local
     link: https://github.com/alibaba/open-local
+    docsLink: https://github.com/alibaba/open-local/blob/main/docs/user-guide/user-guide.md
     driverClass: local.csi.alibaba.com
     description: CSI Driver for Local Storage
     lifecycleModes:
@@ -1667,6 +1742,7 @@ drivers:
       file: true
   - name: Portworx
     link: https://github.com/libopenstorage/openstorage/tree/master/csi
+    docsLink: https://docs.portworx.com/portworx-enterprise/operations/portworx-csi-driver
     driverClass: pxd.portworx.com
     description: CSI Driver for [Portworx](https://docs.portworx.com/portworx-install-with-kubernetes/storage-operations/csi/)
     lifecycleModes:
@@ -1687,6 +1763,7 @@ drivers:
       tracking: false
   - name: Proxmox
     link: https://github.com/sergelogvinov/proxmox-csi-plugin
+    docsLink: https://github.com/sergelogvinov/proxmox-csi-plugin/tree/main/docs
     driverClass: csi.proxmox.sinextra.dev
     description: CSI Driver for [Proxmox](https://www.proxmox.com/en/)
     lifecycleModes:
@@ -1706,6 +1783,7 @@ drivers:
       tracking: false
   - name: QingCloud CSI
     link: https://github.com/yunify/qingcloud-csi
+    docsLink: https://github.com/yunify/qingcloud-csi/blob/master/docs/user-guide.md
     driverClass: disk.csi.qingcloud.com
     description: CSI Driver for QingCloud Block Storage
     lifecycleModes:
@@ -1725,6 +1803,7 @@ drivers:
       tracking: false
   - name: QingStor CSI
     link: https://github.com/yunify/qingstor-csi
+    docsLink: https://github.com/yunify/qingstor-csi/blob/master/docs/user-guide.md
     driverClass: neonsan.csi.qingstor.com
     description: CSI Driver for NeonSAN storage system
     lifecycleModes:
@@ -1777,8 +1856,9 @@ drivers:
       tracking: false
   - name: ROBIN
     link: https://get.robin.io/
+    docsLink: https://docs.robin.io
     driverClass: robin
-    description: CSI Driver for [ROBIN](https://docs.robin.io)
+    description: CSI Driver for ROBIN
     lifecycleModes:
       persistent: true
     accessModes:
@@ -1862,6 +1942,7 @@ drivers:
       tracking: false
   - name: Seagate Exos X
     link: https://github.com/Seagate/seagate-exos-x-csi
+    docsLink: https://github.com/Seagate/seagate-exos-x-csi/tree/main/docs
     driverClass: csi-exos-x.seagate.com
     description: CSI driver for [Seagate Exos X](https://www.seagate.com/products/storage/data-storage-systems/raid/) and OEM systems
     lifecycleModes:
@@ -1894,6 +1975,7 @@ drivers:
       dynamic: true
   - name: Secrets Store CSI Driver
     link: https://github.com/kubernetes-sigs/secrets-store-csi-driver
+    docsLink: https://secrets-store-csi-driver.sigs.k8s.io/
     driverClass: secrets-store.csi.k8s.io
     description: CSI Driver for mounting secrets, keys, and certs stored in enterprise-grade external secrets stores as volumes.
     lifecycleModes:
@@ -2041,6 +2123,7 @@ drivers:
       tracking: false
   - name: Tencent Cloud Block Storage
     link: https://github.com/TencentCloud/kubernetes-csi-tencentcloud
+    docsLink: https://github.com/TencentCloud/kubernetes-csi-tencentcloud/blob/master/docs/README_CBS.md
     driverClass: com.tencent.cloud.csi.cbs
     description: CSI Driver for Tencent Cloud Block Storage
     lifecycleModes:
@@ -2060,6 +2143,7 @@ drivers:
       tracking: false
   - name: Tencent Cloud File Storage
     link: https://github.com/TencentCloud/kubernetes-csi-tencentcloud
+    docsLink: https://github.com/TencentCloud/kubernetes-csi-tencentcloud/blob/master/docs/README_CFS.md
     driverClass: com.tencent.cloud.csi.cfs
     description: CSI Driver for Tencent Cloud File Storage
     lifecycleModes:
@@ -2074,6 +2158,7 @@ drivers:
       file: true
   - name: Tencent Cloud Object Storage
     link: https://github.com/TencentCloud/kubernetes-csi-tencentcloud
+    docsLink: https://github.com/TencentCloud/kubernetes-csi-tencentcloud/blob/master/docs/README_COSFS.md
     driverClass: com.tencent.cloud.csi.cosfs
     description: CSI Driver for Tencent Cloud Object Storage
     lifecycleModes:
@@ -2139,6 +2224,7 @@ drivers:
       tracking: false
   - name: VAST Data
     link: https://github.com/vast-data/vast-csi
+    docsLink: https://support.vastdata.com/s/topic/0TOV40000000TwTOAU/vast-csi-driver-23-administrators-guide
     driverClass: csi.vastdata.com
     description: CSI Driver for VAST Data
     lifecycleModes:
@@ -2159,6 +2245,7 @@ drivers:
       tracking: false
   - name: XSKY-EBS
     link: https://github.com/xsky-storage/xsky-csi-driver
+    docsLink: https://xsky-storage.github.io/xsky-csi-driver/
     driverClass: csi.block.xsky.com
     description: CSI Driver for XSKY Distributed Block Storage (X-EBS)
     lifecycleModes:
@@ -2178,6 +2265,7 @@ drivers:
       tracking: false
   - name: XSKY-FS
     link: https://github.com/xsky-storage/xsky-csi-driver
+    docsLink: https://xsky-storage.github.io/xsky-csi-driver/
     driverClass: csi.fs.xsky.com
     description: CSI Driver for XEDP, XEUS, XUDS, XGFS, X3000, X5000
     lifecycleModes:
@@ -2197,6 +2285,7 @@ drivers:
       tracking: false
   - name: Vault
     link: https://github.com/kubevault/csi-driver
+    deprecated: true
     driverClass: secrets.csi.kubevault.com
     description: CSI Driver for mounting HashiCorp Vault secrets as volumes.
     lifecycleModes:
@@ -2206,6 +2295,7 @@ drivers:
       dynamic: false
   - name: VDA
     link: https://github.com/virtual-disk-array/vda
+    docsLink: https://virtual-disk-array.readthedocs.io/en/latest/Introduction.html
     driverClass: csi.vda.io
     description: An open source block storage system base on SPDK
     lifecycleModes:
@@ -2290,6 +2380,7 @@ drivers:
       dynamic: true
   - name: WekaIO
     link: https://github.com/weka/csi-wekafs
+    docsLink: https://docs.weka.io/appendices/weka-csi-plugin
     driverClass: csi.weka.io
     description: CSI Driver for mounting WekaIO WekaFS filesystem as volumes
     lifecycleModes:
@@ -2337,7 +2428,7 @@ drivers:
   - name: simplyblock
     link: https://github.com/simplyblock-io/spdk-csi
     driverClass: csi.simplyblock.io
-    description: "CSI Driver for simplyblock's disaggregated Elastic Block Storage utilizing NVMe over TCP"
+    description: "CSI Driver for simplyblock's [disaggregated Elastic Block Storage](https://www.simplyblock.io) utilizing NVMe over TCP"
     lifecycleModes:
       persistent: true
     accessModes:
@@ -2368,6 +2459,7 @@ drivers:
       dynamic: true
   - name: DirectPV
     link: https://github.com/minio/directpv
+    docsLink: https://github.com/minio/directpv/blob/master/docs/README.md
     driverClass: directpv.min.io
     description: CSI Driver which implements a Direct Attached Storage
     lifecycleModes:
@@ -2380,7 +2472,8 @@ drivers:
       topology: true
   - name: Bare-metal CSI Driver
     link: https://github.com/dell/csi-baremetal
-    driverClass: 
+    docsLink: https://github.com/dell/csi-baremetal/blob/master/docs/README.md
+    driverClass: csi-baremetal.dell.com
     description: CSI Driver which implements a Direct Attached Storage
     lifecycleModes:
       persistent: true
