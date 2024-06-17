@@ -1,7 +1,9 @@
 ---
 menus: header
 title: CSI Driver Listing
-slug: storageclasses
+slug: csidrivers
+aliases:
+  - /storagesclasses
 description: Searchable listing of Kubernetes volume providers (Kubernetes CSI). Find your perfect implementation based on features, access modes, and more.
 weight: 2
 showMetadata: false
