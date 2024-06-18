@@ -57,6 +57,9 @@
             <input type="checkbox" id="deprecated" name="deprecated" checked="checked" />
         </div>
     </div>
+    <div>
+        <div>Filter result: <span id="filteredCsiDrivers"></span>/<span id="availableCsiDrivers"></span></div>
+    </div>
 </div>
 
 <table class="alternating">
@@ -124,6 +127,10 @@
     const capabilities = document.getElementById("capabilities");
     const accessModes = document.getElementById("accessModes");
     const deprecated = document.getElementById("deprecated");
+    const filteredCsiDrivers = document.getElementById("filteredCsiDrivers");
+    const availableCsiDrivers = document.getElementById("availableCsiDrivers");
+
+    availableCsiDrivers.textContent = drivers.length.toString();
 
     const filterCsiDrivers = () => {
         const term = searchTerm.value.toLowerCase();
@@ -197,6 +204,8 @@
             }
         });
 
+        filteredCsiDrivers.textContent = filteredDrivers.length.toString();
+
         return true;
     };
 
@@ -215,6 +224,8 @@
     accessModes.onchange = function() {
         return filterCsiDrivers();
     }
+
+    filterCsiDrivers();
 </script>
 
 {{ $js := resources.Get "/js/multiselect-dropdown.js" }}
