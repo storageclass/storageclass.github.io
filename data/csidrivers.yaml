@@ -1485,6 +1485,27 @@ drivers:
       clone: false
       topology: true
       tracking: false
+  - name: Metal Stack CSI Driver LVM
+    link: https://github.com/metal-stack/csi-driver-lvm
+    driverClass: lvm.csi.metal-stack.io
+    description: CSI Driver for bare metal deployments uses local storage
+    lifecycleModes:
+      persistent: true
+      ephemeral: true
+    accessModes:
+      readOnlyMany: false
+      readWriteOnce: true
+      readOnlyOnce: true
+      readWriteMany: false
+      readWriteOncePod: true
+    capabilities:
+      dynamic: true
+      snapshot: false
+      raw: true
+      expansion: true
+      clone: false
+      topology: true
+      tracking: false
   - name: MooseFS
     link: https://github.com/moosefs/moosefs-csi
     driverClass: com.tuxera.csi.moosefs
