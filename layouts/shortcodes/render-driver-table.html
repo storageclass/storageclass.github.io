@@ -75,12 +75,12 @@
 <tr id="{{- .name -}}">
     <td>
         <a href="{{- .link -}}" rel="nofollow noopener" target="_blank" class="icon">
-            {{ if (hasPrefix .link "https://github.com") }} <img src="/svg/github.svg" height="18" /> {{ else }} <img src="/svg/house.svg" height="18" /> {{ end }}
+            {{ if (hasPrefix .link "https://github.com") }} <img src="/svg/github.svg" height="18" alt="Link to the {{- .name -}} GitHub repository" /> {{ else }} <img src="/svg/house.svg" height="18" alt="Link to the {{- .name -}} website" /> {{ end }}
         </a>
         <a href="{{ if .docsLink }} {{- .docsLink -}} {{ else }} {{- .link -}} {{ end }}" rel="nofollow noopener" target="_blank" class="icon">
-            <img src="/svg/book.svg" height="18" />
+            <img src="/svg/book.svg" height="18" alt="Link to the {{- .name -}} documentation" />
         </a>
-        <a href="{{- .link -}}" rel="nofollow noopener" target="_blank">{{- .name -}}</a>
+        <a href="{{- .link -}}" rel="nofollow noopener" target="_blank" alt="Where to find {{- .name -}}">{{- .name -}}</a>
     </td>
     <td>{{- .driverClass -}} </td>
     <td>{{ .description | $.Page.RenderString }}</td>
