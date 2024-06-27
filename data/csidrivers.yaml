@@ -1664,10 +1664,10 @@ drivers:
     capabilities:
       dynamic: true
       snapshot: true
-      raw: false
+      raw: true
       expansion: true
       clone: true
-      topology: false
+      topology: true
       tracking: false
   - name: Open-E
     link: https://github.com/open-e/JovianDSS-KubernetesCSI
